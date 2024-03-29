@@ -18,6 +18,7 @@
   "homepage": "https://github.com/fess986/Films-Library-markup#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "pixel-glass": "^1.0.13"
+    "browser-sync": "^2.27.7",
+    "gulp-concat": "^2.6.1"
   }
 }
