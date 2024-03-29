@@ -1,0 +1,23 @@
+{
+  "name": "films-library-markup",
+  "version": "1.0.0",
+  "description": "markup for films library application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fess986/Films-Library-markup.git"
+  },
+  "author": "Fess986",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fess986/Films-Library-markup/issues"
+  },
+  "homepage": "https://github.com/fess986/Films-Library-markup#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "pixel-glass": "^1.0.13"
+  }
+}
