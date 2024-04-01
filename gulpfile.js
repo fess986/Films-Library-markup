@@ -64,5 +64,10 @@ function styles() {
     .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
 
+function startwatch() {
+  watch('src/**/' + preprocessor + '/**/*.scss', styles);  // src/**/sass/**.scss означает, что ищется папка sass, не обязательно в корне src, а может и в глубине
+  watch('src/**/*.html').on('change', browserSync.reload);
+}
+
 exports.styles = styles;
-exports.default = parallel(browsersync, styles);
+exports.default = parallel(browsersync, styles, startwatch);
