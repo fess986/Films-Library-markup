@@ -2,6 +2,8 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 
+const pagePath = 'src/pages';
+
 let preprocessor = 'sass'; 
 
 const {
@@ -16,17 +18,13 @@ function browsersync() {
   browserSync.init({ 
     server: {
       baseDir: './',
-      index: 'src/pages/main/main.html'
+      index: `${pagePath}/main/main.html`
     }, 
     notify: false, 
     online: true,
   })
 }
 
-// function defaultTask(cb) {
-//   // place code for your default task here
-//   cb();
-// }
 
 // exports.default = defaultTask
 exports.default = parallel(browsersync);
