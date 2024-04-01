@@ -1,0 +1,1 @@
+{"version":3,"sources":["blocks/_header.scss","blocks/_main-layout.scss"],"names":[],"mappings":"AAAA;AACE,kBAAA;;ACDF;AACE,kBAAA","file":"../sass/styles.min.css","sourcesContent":[".ass2 {\n  background-color: $white;\n}","body {\n  background-color: $white;\n}"]}
