@@ -67,6 +67,7 @@ function styles() {
 function startwatch() {
   watch('src/**/' + preprocessor + '/**/*.scss', styles);  // src/**/sass/**.scss означает, что ищется папка sass, не обязательно в корне src, а может и в глубине
   watch('src/**/*.html').on('change', browserSync.reload);
+  watch('src/**/*.js').on('change', browserSync.reload);
 }
 
 exports.styles = styles;
