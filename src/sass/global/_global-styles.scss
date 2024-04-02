@@ -5,6 +5,7 @@ html {
 body,
 html {
 	margin: 0;
+  @include main-font-family;
 } 
 
 *,
@@ -37,3 +38,4 @@ a, ul, li {
   list-style: none;
   text-decoration: none;
 }
+
