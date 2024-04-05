@@ -1,0 +1,77 @@
+.main-page {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+
+  @include main-font-family;
+  @include font-medium;
+
+  background-color: #fff;
+
+}
+
+.hero__container {
+  position: absolute;
+  top:0;
+  left: 0;
+  @include z-index-back;
+}
+
+.main-page__hero-image {
+  position: relative;
+  background: #e1b0b2;
+  @include z-index-middle;
+}
+
+.hero {
+  max-width: 1500px;
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+}
+
+.hero__header {
+  position: relative;
+  margin: 0 auto;
+  @include z-index-middle;
+}
+
+.main-page-header {
+  max-width: 1300px;
+  display: flex;
+  padding: 25px 75px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-block__avatar {
+  padding-right: 25px;
+}
+
+.user-block {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-block__item {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: $text-color-additional;
+
+}
+
+
+
+.main-page__film-card {
+  position: relative;
+  @include z-index-middle;
+}
+
+.main-page__content {
+  width: 1200px;
+  background-color: brown;
+}

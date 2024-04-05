@@ -6,3 +6,35 @@
 	font-family: "Arial Black", sans-serif;
 }
 
+// @mixin text-color($color) {
+// 	color: $color;
+// }
+
+@mixin font-small {
+	font-size: 17px;
+	line-height: 20px;
+}
+
+@mixin font-medium {
+	font-size: 19px;
+	line-height: 23px;
+}
+
+@mixin font-h2 {
+	font-size: 32px;
+	line-height: 45px;
+}
+
+@mixin z-index-back {
+	z-index: 0;
+}
+
+@mixin z-index-front {
+	z-index: 2;
+}
+
+@mixin z-index-middle {
+	z-index: 2;
+}
+
+
