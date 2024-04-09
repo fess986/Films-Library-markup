@@ -1,7 +1,11 @@
 .main-page {
   position: relative;
-  width: 1200px;
+  max-width: 1200px;
+  min-height: 100vh;
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
 
   @include main-font-family;
   @include font-medium;
@@ -73,7 +77,16 @@
   max-width: 1300px;
   padding: 25px 75px;
   display: flex;
+}
 
+.film-card__title {
+  @include font-h2;
+  color: $text-color-main;
+}
+
+.film-card__meta {
+  @include font-small;
+  color: $text-color-main;
 }
 
 .main-page__content {
@@ -83,6 +96,7 @@
 }
 
 .main-page__footer {
-  width: 1200px;
+  margin-top: auto;
+  max-width: 1200px;
   background: gray url("../../../src/images/content-fone.jpg") -300px 330px repeat;
 }
