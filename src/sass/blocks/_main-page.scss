@@ -6,8 +6,7 @@
   @include main-font-family;
   @include font-medium;
 
-  background-color: #fff;
-
+  background: #ece8dd url("../../../src/images/fone.gif") left top repeat;
 }
 
 .hero__container {
@@ -19,7 +18,7 @@
 
 .main-page__hero-image {
   position: relative;
-  background: #e1b0b2;
+  background: gray url("../../../src/images/content-fone.jpg") -300px 330px repeat;
   @include z-index-middle;
 }
 
@@ -64,14 +63,26 @@
 
 }
 
-
-
 .main-page__film-card {
   position: relative;
+  margin: 0 auto;
   @include z-index-middle;
+}
+
+.film-card{
+  max-width: 1300px;
+  padding: 25px 75px;
+  display: flex;
+
 }
 
 .main-page__content {
   width: 1200px;
-  background-color: brown;
+  // background-color: brown;
+  background: gray url("../../../src/images/content-fone.jpg") -300px 330px repeat;
+}
+
+.main-page__footer {
+  width: 1200px;
+  background: gray url("../../../src/images/content-fone.jpg") -300px 330px repeat;
 }
