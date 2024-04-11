@@ -38,6 +38,7 @@
 .hero__header {
   position: relative;
   margin: 0 auto;
+  margin-bottom: 58px;
   @include z-index-middle;
 }
 
@@ -64,11 +65,13 @@
   line-height: 24px;
   font-weight: 500;
   color: $text-color-additional;
+  @include black-text-stroke;
 
 }
 
 .main-page__film-card {
   position: relative;
+  // margin-top: 100px;
   margin: 0 auto;
   @include z-index-middle;
 }
@@ -79,14 +82,94 @@
   display: flex;
 }
 
+.film-card__poster {
+  margin-right: 40px;
+}
+
+.film-card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.film-card__image {
+  width: 218px;
+  max-width: 100%;
+  height: auto;
+}
+
 .film-card__title {
   @include font-h2;
   color: $text-color-main;
+  @include black-text-stroke;
+
+  max-width: 750px;
+  max-height: 140px;
+  overflow: hidden;
 }
 
 .film-card__meta {
-  @include font-small;
+  @include font-medium;
+  font-weight: 700;
+
   color: $text-color-main;
+  @include black-text-stroke;
+
+  margin-bottom: 25px;
+}
+
+.film-card__genre::after {
+  content: '·';
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.film-card__buttons {
+  display: flex;
+  max-width: 700px;
+  max-height: 300px;
+}
+
+.film-card__button {
+  margin-right: 14px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.button {
+  display: flex;
+
+  @include font-medium;
+  color: $text-color-main;
+  
+  background: rgba(55, 54, 41, 0.65);
+
+  align-items: center;
+  padding: 13px 30px;
+  min-width: 128px;
+  max-width: 300px;
+  overflow: hidden;
+
+  border-radius: 8px;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+
+  will-change: transform;
+  transition: .2s background-color,.2s transform,.2s -webkit-transform;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.51);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+
+  & svg {
+    vertical-align: top;
+    margin-right: 9px;
+  }
+
 }
 
 .main-page__content {
