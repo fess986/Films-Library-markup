@@ -72,6 +72,7 @@ ul {
 .hero__header {
   position: relative;
   margin: 0 auto;
+  margin-bottom: 58px;
   z-index: 2
 }
 .main-page-header {
@@ -103,7 +104,8 @@ ul {
   font-size: 20px;
   line-height: 24px;
   font-weight: 500;
-  color: #e3e319
+  color: #e3e319;
+  text-shadow: -1px 0 #000,0 1px #000,1px 0 #000,0 -1px #000
 }
 .main-page__film-card {
   position: relative;
@@ -117,15 +119,89 @@ ul {
   display: -ms-flexbox;
   display: flex
 }
+.film-card__poster {
+  margin-right: 40px
+}
+.film-card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+.film-card__image {
+  width: 218px;
+  max-width: 100%;
+  height: auto
+}
 .film-card__title {
   font-size: 32px;
   line-height: 45px;
-  color: #ffff1b
+  color: #ffff1b;
+  text-shadow: -1px 0 #000,0 1px #000,1px 0 #000,0 -1px #000;
+  max-width: 750px;
+  max-height: 140px;
+  overflow: hidden
 }
 .film-card__meta {
-  font-size: 17px;
-  line-height: 20px;
-  color: #ffff1b
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 700;
+  color: #ffff1b;
+  text-shadow: -1px 0 #000,0 1px #000,1px 0 #000,0 -1px #000;
+  margin-bottom: 25px
+}
+.film-card__genre::after {
+  content: "·";
+  margin-left: 4px;
+  margin-right: 4px
+}
+.film-card__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 700px;
+  max-height: 300px
+}
+.film-card__button {
+  margin-right: 14px
+}
+.film-card__button:last-child {
+  margin-right: 0
+}
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 19px;
+  line-height: 23px;
+  color: #ffff1b;
+  background: rgba(55,54,41,.65);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 13px 30px;
+  min-width: 128px;
+  max-width: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  will-change: transform;
+  transition: .2s background-color,.2s transform,.2s -webkit-transform
+}
+.button:hover {
+  background: rgba(0,0,0,.51);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1)
+}
+.button svg {
+  vertical-align: top;
+  margin-right: 9px
 }
 .main-page__content {
   width: 1200px;
@@ -135,9 +211,6 @@ ul {
   margin-top: auto;
   max-width: 1200px;
   background: gray url(../../../src/images/content-fone.jpg) -300px 330px repeat
-}
-.ass2 {
-  background-color: #fff
 }
 body {
   background-color: #fff
