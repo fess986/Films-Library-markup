@@ -27,7 +27,8 @@
 }
 
 .hero {
-  max-width: 1500px;
+  max-width: 1440px;
+  height: 675px;
 }
 
 .hero__image {
@@ -79,7 +80,7 @@
 .film-card{
   max-width: 1300px;
   padding: 25px 75px;
-  display: flex;
+  display: flex;    
 }
 
 .film-card__poster {
@@ -177,6 +178,115 @@
   // background-color: brown;
   background: gray url("../../../src/images/content-fone.jpg") -300px 330px repeat;
 }
+
+.main-page-content__catalog {
+  width: 100%;
+  padding: 25px 75px;
+}
+
+.catalog {
+  width: 1200px;
+  max-width: 1200px;
+}
+
+.catalog__genres-list {
+  margin-bottom: 25px;
+}
+
+.genres-list {
+  width: 100%;
+}
+
+.genres-list__item {
+  display: inline-block;
+  min-width: 80px;
+  max-width: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 10px;
+}
+
+.genres-list__link {
+  @include font-medium;
+  color: $text-color-catalog-menu;
+}
+
+.catalog__films-list {
+  width: 1050px;
+}
+
+.films-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start
+}
+
+.films-list__films-card {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.small-film-card {
+  position: relative;
+  width: calc((100% - 50px)/ 4);
+
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+
+  will-change: transform;
+  transition: .2s transform, .2s -webkit-transform;
+
+  &:hover {
+    @include z-index-top;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.small-film-card__image {
+  display: block;
+  position: relative;
+  @include z-index-front;
+
+  &::after {
+    content: '';
+    position: absolute;
+    @include z-index-front;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0) 25%,rgba(0,0,0,.63) 97%);
+  }
+}
+
+.small-film-card__img {
+  width: 250px;
+  height: auto;
+  max-height: 160px;
+  object-fit: cover;
+}
+
+.small-film-card__title {
+  @include z-index-middle;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0 10px;
+  @include font-small;
+  color: $text-color-main; 
+}
+
+.small-film-card__link {
+  color: inherit;
+}
+
 
 .main-page__footer {
   margin-top: auto;
