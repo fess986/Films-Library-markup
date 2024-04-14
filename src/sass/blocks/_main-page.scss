@@ -59,6 +59,32 @@
   justify-content: space-between;
 }
 
+.main-page-header__logo {
+  margin-left: 70px;
+}
+
+.logo {
+  display: block;
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  overflow: hidden;
+  will-change: transform;
+  transition: .5s transform, .5s -webkit-transform;
+  &:hover {
+    @include z-index-top;
+            transform: scale(1.2);
+  }
+}
+
+.logo__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
 .user-block__item {
   margin-right: 20px;
   &:last-child {
@@ -309,16 +335,12 @@
   color: inherit;
 }
 
-.more-films {
-  
-}
-
 .more-films__button {
   display: block;
   width: 100%;
   padding: 29px 40px;
   background: none;
-  border: 1px solid rgba(217, 202, 116, 0.2);
+  border: 1px solid rgba(44, 43, 39, 0.2);
   border-radius: 8px;
   transition: border-color 0.5s;
   font-size: 22px;
