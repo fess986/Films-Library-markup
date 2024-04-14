@@ -268,19 +268,20 @@ ul {
 }
 .main-page-content__catalog {
   width: 100%;
-  padding: 25px 75px
+  padding: 20px 75px
 }
 .catalog {
   width: 1200px;
   max-width: 1200px
 }
 .catalog__genres-list {
-  margin-bottom: 25px
+  margin-bottom: 16px
 }
 .genres-list {
   width: 100%
 }
 .genres-list__item {
+  position: relative;
   display: inline-block;
   min-width: 80px;
   max-width: 250px;
@@ -298,12 +299,24 @@ ul {
   -webkit-transition: -webkit-transform .2s linear;
   transition: -webkit-transform .2s linear;
   transition: transform .2s linear;
-  transition: transform .2s linear,-webkit-transform .2s linear
+  transition: transform .2s linear,-webkit-transform .2s linear;
+  padding-bottom: 8px;
+  margin-bottom: 1px
 }
 .genres-list__link:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1)
+}
+.genres-list__link--active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  bottom: 0;
+  background: red
 }
 .catalog__films-list {
   width: 1050px
