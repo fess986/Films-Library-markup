@@ -237,7 +237,7 @@
 
 .main-page-content__catalog {
 	width: 100%;
-	padding: 25px 75px;
+	padding: 20px 75px;
 }
 
 .catalog {
@@ -246,7 +246,7 @@
 }
 
 .catalog__genres-list {
-	margin-bottom: 25px;
+	margin-bottom: 16px;
 }
 
 .genres-list {
@@ -254,6 +254,7 @@
 }
 
 .genres-list__item {
+	position: relative;
 	display: inline-block;
 	min-width: 80px;
 	max-width: 250px;
@@ -261,17 +262,55 @@
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	padding: 0 10px;
+
+	// &::after {
+	//   content: '';
+	//   position: absolute;
+	//   z-index: 100;
+	//   left: 0;
+	//   right: 0;
+	//   height: 1px;
+	//   bottom: 0;
+	//   background: red;
+	//   display: block;
+	// }
+
+	// &--active::after {
+	//   content: '';
+	//   position: absolute;
+	//   z-index: 1;
+	//   left: 0;
+	//   right: 0;
+	//   height: 1px;
+	//   bottom: 0;
+	//   background: #D9CD8D;
+	//   display: none;
+
+	// }
 }
 
 .genres-list__link {
-  display: block;
+	display: block;
 	@include font-medium;
 	color: $text-color-additional;
-  will-change: transform;
-  transition: transform 0.2s linear;
+	will-change: transform;
+	transition: transform 0.2s linear;
+	padding-bottom: 8px; // для того чтобы оттолкнуть элемент вниз
+	margin-bottom: 1px; // для того чтобы элемент не резался при скейле
 
 	&:hover {
-    transform: scale(1.1);
+		transform: scale(1.1);
+	}
+
+	&--active::after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 2px;
+		bottom: 0;
+		background: red;
 	}
 }
 
