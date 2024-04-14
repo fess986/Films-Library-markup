@@ -1,8 +1,7 @@
 .main-page {
   position: relative;
-  max-width: 1200px;
+ 
   min-height: 100vh;
-  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
@@ -10,10 +9,15 @@
   @include main-font-family;
   @include font-medium;
 
+  // background-color: red;
+
   background: #ece8dd url("../../../src/images/fone.gif") left top repeat;
 }
 
 .main-page__container {
+  max-width: 1200px;
+  width: 100%; // чтобы контейнер занимал всю доступную ширину, если контент меньше 1200px
+  margin: 0 auto;
   background-color: gray;
   background: gray url("../../../src/images/content-fone.jpg") -330px 330px repeat;
 }
@@ -55,8 +59,24 @@
   justify-content: space-between;
 }
 
-.user-block__avatar {
-  padding-right: 25px;
+.user-block__item {
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.user-avatar {
+  width: 63px; 
+  height: 63px; 
+  border-radius: 50%;
+  overflow: hidden;  // для того чтобы обрезалось кружком
+}
+
+.user-avatar__image {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
 }
 
 .user-block {
@@ -65,7 +85,7 @@
   cursor: pointer;
 }
 
-.user-block__item {
+.user-block-text {
   font-size: 20px;
   line-height: 24px;
   font-weight: 500;
@@ -232,7 +252,7 @@
 
 .small-film-card {
   position: relative;
-  width: calc((100% - 50px)/ 4);
+  width: calc((100% - 40px)/ 4);
 
   border-radius: 6px;
   overflow: hidden;
@@ -287,6 +307,29 @@
 
 .small-film-card__link {
   color: inherit;
+}
+
+.more-films {
+  
+}
+
+.more-films__button {
+  display: block;
+  width: 100%;
+  padding: 29px 40px;
+  background: none;
+  border: 1px solid rgba(217, 202, 116, 0.2);
+  border-radius: 8px;
+  transition: border-color 0.5s;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: $text-color-catalog-menu;
+  cursor: pointer; 
+
+  &:hover {
+    border-color: $text-color-catalog-menu;
+  }
 }
 
 
