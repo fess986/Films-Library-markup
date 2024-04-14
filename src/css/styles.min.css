@@ -131,7 +131,14 @@ ul {
   width: 63px;
   height: 63px;
   border-radius: 50%;
-  overflow: hidden
+  overflow: hidden;
+  will-change: transform;
+  transition: .5s transform,.5s -webkit-transform
+}
+.user-avatar:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2)
 }
 .user-avatar__image {
   width: 100%;
@@ -153,7 +160,12 @@ ul {
   line-height: 24px;
   font-weight: 500;
   color: #e3e319;
-  text-shadow: -1px 0 #000,0 1px #000,1px 0 #000,0 -1px #000
+  text-shadow: -1px 0 #000,0 1px #000,1px 0 #000,0 -1px #000;
+  -webkit-transition: .5s color;
+  transition: .5s color
+}
+.user-block-text:hover {
+  color: #ffff1b
 }
 .main-page__film-card {
   position: relative;
@@ -278,9 +290,20 @@ ul {
   padding: 0 10px
 }
 .genres-list__link {
+  display: block;
   font-size: 19px;
   line-height: 23px;
-  color: #000
+  color: #000;
+  will-change: transform;
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear,-webkit-transform .2s linear
+}
+.genres-list__link:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1)
 }
 .catalog__films-list {
   width: 1050px
