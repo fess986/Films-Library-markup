@@ -69,13 +69,13 @@
 	height: 63px;
 	border-radius: 50%;
 	overflow: hidden;
-  cursor: pointer;
+	cursor: pointer;
 
-	will-change: transform;  // говорим браузеру что будет изменяться размер
-	transition: 0.5s transform, 0.5s -webkit-transform;  // задаём время трансформации
+	will-change: transform; // говорим браузеру что будет изменяться размер
+	transition: 0.5s transform, 0.5s -webkit-transform; // задаём время трансформации
 	&:hover {
 		@include z-index-top; // для того чтобы изображение перекрывало другие смежные элементы
-		transform: scale(1.2);  // задаём масштаб трансформирования
+		transform: scale(1.2); // задаём масштаб трансформирования
 	}
 }
 
@@ -97,6 +97,12 @@
 	height: 63px;
 	border-radius: 50%;
 	overflow: hidden; // для того чтобы обрезалось кружком
+
+	will-change: transform;
+	transition: 0.5s transform, 0.5s -webkit-transform;
+	&:hover {
+		transform: scale(1.2);
+	}
 }
 
 .user-avatar__image {
@@ -117,11 +123,15 @@
 	font-weight: 500;
 	color: $text-color-main-dark;
 	@include black-text-stroke;
+
+	transition: 0.5s color;
+	&:hover {
+		color: $text-color-main;
+	}
 }
 
 .main-page__film-card {
 	position: relative;
-	// margin-top: 100px;
 	margin: 0 auto;
 	@include z-index-middle;
 }
@@ -254,8 +264,15 @@
 }
 
 .genres-list__link {
+  display: block;
 	@include font-medium;
 	color: $text-color-additional;
+  will-change: transform;
+  transition: transform 0.2s linear;
+
+	&:hover {
+    transform: scale(1.1);
+	}
 }
 
 .catalog__films-list {
@@ -357,14 +374,14 @@
 }
 
 .main-page__footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	margin-top: auto;
 	max-width: 1400px;
 }
 
 .copypright {
-  @include font-medium;
-  @include text-color($text-color-additional)
+	@include font-medium;
+	@include text-color($text-color-additional);
 }
