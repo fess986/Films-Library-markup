@@ -6,9 +6,9 @@
 	font-family: "Arial Black", sans-serif;
 }
 
-// @mixin text-color($color) {
-// 	color: $color;
-// }
+@mixin text-color($color) {
+	color: $color;
+}
 
 @mixin font-small {
 	font-size: 17px;

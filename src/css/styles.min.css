@@ -105,6 +105,7 @@ ul {
   height: 63px;
   border-radius: 50%;
   overflow: hidden;
+  cursor: pointer;
   will-change: transform;
   transition: .5s transform,.5s -webkit-transform
 }
@@ -370,8 +371,23 @@ ul {
   border-color: #000
 }
 .main-page__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: auto;
-  max-width: 1200px
+  max-width: 1400px
+}
+.copypright {
+  font-size: 19px;
+  line-height: 23px;
+  color: #000
 }
 body {
   background-color: #fff

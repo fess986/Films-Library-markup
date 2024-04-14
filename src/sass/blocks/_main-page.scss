@@ -1,361 +1,370 @@
 .main-page {
-  position: relative;
- 
-  min-height: 100vh;
+	position: relative;
 
-  display: flex;
-  flex-direction: column;
+	min-height: 100vh;
 
-  @include main-font-family;
-  @include font-medium;
+	display: flex;
+	flex-direction: column;
 
-  // background-color: red;
+	@include main-font-family;
+	@include font-medium;
 
-  background: #ece8dd url("../../../src/images/fone.gif") left top repeat;
+	// background-color: red;
+
+	background: #ece8dd url("../../../src/images/fone.gif") left top repeat;
 }
 
 .main-page__container {
-  max-width: 1200px;
-  width: 100%; // чтобы контейнер занимал всю доступную ширину, если контент меньше 1200px
-  margin: 0 auto;
-  background-color: gray;
-  background: gray url("../../../src/images/content-fone.jpg") -330px 330px repeat;
+	max-width: 1200px;
+	width: 100%; // чтобы контейнер занимал всю доступную ширину, если контент меньше 1200px
+	margin: 0 auto;
+	background-color: gray;
+	background: gray url("../../../src/images/content-fone.jpg") -330px 330px repeat;
 }
 
 .hero__container {
-  position: absolute;
-  top:0;
-  left: 0;
-  @include z-index-back;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include z-index-back;
 }
 
 .main-page__hero-image {
-  position: relative;
-  @include z-index-middle;
+	position: relative;
+	@include z-index-middle;
 }
 
 .hero {
-  max-width: 1440px;
-  height: 675px;
+	max-width: 1440px;
+	height: 675px;
 }
 
 .hero__image {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
 
 .hero__header {
-  position: relative;
-  margin: 0 auto;
-  margin-bottom: 58px;
-  @include z-index-middle;
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 58px;
+	@include z-index-middle;
 }
 
 .main-page-header {
-  max-width: 1300px;
-  display: flex;
-  padding: 25px 75px;
-  align-items: center;
-  justify-content: space-between;
+	max-width: 1300px;
+	display: flex;
+	padding: 25px 75px;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .main-page-header__logo {
-  margin-left: 70px;
+	margin-left: 70px;
 }
 
 .logo {
-  display: block;
-  width: 63px;
-  height: 63px;
-  border-radius: 50%;
-  overflow: hidden;
-  will-change: transform;
-  transition: .5s transform, .5s -webkit-transform;
-  &:hover {
-    @include z-index-top;
-            transform: scale(1.2);
-  }
+	display: block;
+	width: 63px;
+	height: 63px;
+	border-radius: 50%;
+	overflow: hidden;
+  cursor: pointer;
+
+	will-change: transform;  // говорим браузеру что будет изменяться размер
+	transition: 0.5s transform, 0.5s -webkit-transform;  // задаём время трансформации
+	&:hover {
+		@include z-index-top; // для того чтобы изображение перекрывало другие смежные элементы
+		transform: scale(1.2);  // задаём масштаб трансформирования
+	}
 }
 
 .logo__image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 
-
-
 .user-block__item {
-  margin-right: 20px;
-  &:last-child {
-    margin-right: 0;
-  }
+	margin-right: 20px;
+	&:last-child {
+		margin-right: 0;
+	}
 }
 
 .user-avatar {
-  width: 63px; 
-  height: 63px; 
-  border-radius: 50%;
-  overflow: hidden;  // для того чтобы обрезалось кружком
+	width: 63px;
+	height: 63px;
+	border-radius: 50%;
+	overflow: hidden; // для того чтобы обрезалось кружком
 }
 
 .user-avatar__image {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .user-block {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
 }
 
 .user-block-text {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 500;
-  color: $text-color-additional;
-  @include black-text-stroke;
-
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 500;
+	color: $text-color-main-dark;
+	@include black-text-stroke;
 }
 
 .main-page__film-card {
-  position: relative;
-  // margin-top: 100px;
-  margin: 0 auto;
-  @include z-index-middle;
+	position: relative;
+	// margin-top: 100px;
+	margin: 0 auto;
+	@include z-index-middle;
 }
 
-.film-card{
-  max-width: 1300px;
-  padding: 25px 75px;
-  display: flex;    
+.film-card {
+	max-width: 1300px;
+	padding: 25px 75px;
+	display: flex;
 }
 
 .film-card__poster {
-  margin-right: 40px;
+	margin-right: 40px;
 }
 
 .film-card__info {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .film-card__image {
-  width: 218px;
-  max-width: 100%;
-  height: auto;
+	width: 218px;
+	max-width: 100%;
+	height: auto;
 }
 
 .film-card__title {
-  @include font-h2;
-  color: $text-color-main;
-  @include black-text-stroke;
+	@include font-h2;
+	color: $text-color-main;
+	@include black-text-stroke;
 
-  max-width: 750px;
-  max-height: 140px;
-  overflow: hidden;
+	max-width: 750px;
+	max-height: 140px;
+	overflow: hidden;
 }
 
 .film-card__meta {
-  @include font-medium;
-  font-weight: 700;
+	@include font-medium;
+	font-weight: 700;
 
-  color: $text-color-main;
-  @include black-text-stroke;
+	color: $text-color-main;
+	@include black-text-stroke;
 
-  margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 
 .film-card__genre::after {
-  content: '·';
-  margin-left: 4px;
-  margin-right: 4px;
+	content: "·";
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
 .film-card__buttons {
-  display: flex;
-  max-width: 700px;
-  max-height: 300px;
+	display: flex;
+	max-width: 700px;
+	max-height: 300px;
 }
 
 .film-card__button {
-  margin-right: 14px;
+	margin-right: 14px;
 
-  &:last-child {
-    margin-right: 0px;
-  }
+	&:last-child {
+		margin-right: 0px;
+	}
 }
 
 .button {
-  display: flex;
+	display: flex;
 
-  @include font-medium;
-  color: $text-color-main;
-  
-  background: rgba(55, 54, 41, 0.65);
+	@include font-medium;
+	color: $text-color-main;
 
-  align-items: center;
-  padding: 13px 30px;
-  min-width: 128px;
-  max-width: 300px;
-  overflow: hidden;
+	background: rgba(55, 54, 41, 0.65);
 
-  border-radius: 8px;
-  border: 0;
-  text-decoration: none;
-  cursor: pointer;
+	align-items: center;
+	padding: 13px 30px;
+	min-width: 128px;
+	max-width: 300px;
+	overflow: hidden;
 
-  will-change: transform;
-  transition: .2s background-color,.2s transform,.2s -webkit-transform;
+	border-radius: 8px;
+	border: 0;
+	text-decoration: none;
+	cursor: pointer;
 
-  &:hover {
-    background: rgba(0, 0, 0, 0.51);
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
+	will-change: transform;
+	transition: 0.2s background-color, 0.2s transform, 0.2s -webkit-transform;
 
-  & svg {
-    vertical-align: top;
-    margin-right: 9px;
-  }
+	&:hover {
+		background: rgba(0, 0, 0, 0.51);
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
 
+	& svg {
+		vertical-align: top;
+		margin-right: 9px;
+	}
 }
 
 .main-page__content {
-  width: 1200px;
+	width: 1200px;
 }
 
 .main-page-content__catalog {
-  width: 100%;
-  padding: 25px 75px;
+	width: 100%;
+	padding: 25px 75px;
 }
 
 .catalog {
-  width: 1200px;
-  max-width: 1200px;
+	width: 1200px;
+	max-width: 1200px;
 }
 
 .catalog__genres-list {
-  margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 
 .genres-list {
-  width: 100%;
+	width: 100%;
 }
 
 .genres-list__item {
-  display: inline-block;
-  min-width: 80px;
-  max-width: 250px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding: 0 10px;
+	display: inline-block;
+	min-width: 80px;
+	max-width: 250px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 0 10px;
 }
 
 .genres-list__link {
-  @include font-medium;
-  color: $text-color-catalog-menu;
+	@include font-medium;
+	color: $text-color-additional;
 }
 
 .catalog__films-list {
-  width: 1050px;
+	width: 1050px;
 }
 
 .films-list {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
 }
 
 .films-list__films-card {
-  margin-right: 10px;
-  margin-bottom: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .small-film-card {
-  position: relative;
-  width: calc((100% - 40px)/ 4);
+	position: relative;
+	width: calc((100% - 40px) / 4);
 
-  border-radius: 6px;
-  overflow: hidden;
-  cursor: pointer;
+	border-radius: 6px;
+	overflow: hidden;
+	cursor: pointer;
 
-  will-change: transform;
-  transition: .2s transform, .2s -webkit-transform;
+	will-change: transform;
+	transition: 0.2s transform, 0.2s -webkit-transform;
 
-  &:hover {
-    @include z-index-top;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
+	&:hover {
+		@include z-index-top;
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
 }
 
 .small-film-card__image {
-  display: block;
-  position: relative;
-  @include z-index-front;
+	display: block;
+	position: relative;
+	@include z-index-front;
 
-  &::after {
-    content: '';
-    position: absolute;
-    @include z-index-front;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+	&::after {
+		content: "";
+		position: absolute;
+		@include z-index-front;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 
-    background-image: linear-gradient(to bottom,rgba(0,0,0,0) 25%,rgba(0,0,0,.63) 97%);
-  }
+		background-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0) 25%,
+			rgba(0, 0, 0, 0.63) 97%
+		);
+	}
 }
 
 .small-film-card__img {
-  width: 250px;
-  height: auto;
-  max-height: 160px;
-  object-fit: cover;
+	width: 250px;
+	height: auto;
+	max-height: 160px;
+	object-fit: cover;
 }
 
 .small-film-card__title {
-  @include z-index-middle;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+	@include z-index-middle;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 
-  padding: 0 10px;
-  @include font-small;
-  color: $text-color-main; 
+	padding: 0 10px;
+	@include font-small;
+	color: $text-color-main;
 }
 
 .small-film-card__link {
-  color: inherit;
+	color: inherit;
 }
 
 .more-films__button {
-  display: block;
-  width: 100%;
-  padding: 29px 40px;
-  background: none;
-  border: 1px solid rgba(44, 43, 39, 0.2);
-  border-radius: 8px;
-  transition: border-color 0.5s;
-  font-size: 22px;
-  line-height: 26px;
-  text-align: center;
-  color: $text-color-catalog-menu;
-  cursor: pointer; 
+	display: block;
+	width: 100%;
+	padding: 29px 40px;
+	background: none;
+	border: 1px solid rgba(44, 43, 39, 0.2);
+	border-radius: 8px;
+	transition: border-color 0.5s;
+	font-size: 22px;
+	line-height: 26px;
+	text-align: center;
+	color: $text-color-additional;
+	cursor: pointer;
 
-  &:hover {
-    border-color: $text-color-catalog-menu;
-  }
+	&:hover {
+		border-color: $text-color-additional;
+	}
 }
 
-
 .main-page__footer {
-  margin-top: auto;
-  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	margin-top: auto;
+	max-width: 1400px;
+}
+
+.copypright {
+  @include font-medium;
+  @include text-color($text-color-additional)
 }
