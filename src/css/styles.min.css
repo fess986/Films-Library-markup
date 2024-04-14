@@ -39,9 +39,7 @@ ul {
 }
 .main-page {
   position: relative;
-  max-width: 1200px;
   min-height: 100vh;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,6 +53,9 @@ ul {
   background: #ece8dd url(../../../src/images/fone.gif) left top repeat
 }
 .main-page__container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
   background-color: gray;
   background: gray url(../../../src/images/content-fone.jpg) -330px 330px repeat
 }
@@ -95,8 +96,23 @@ ul {
   -ms-flex-pack: justify;
   justify-content: space-between
 }
-.user-block__avatar {
-  padding-right: 25px
+.user-block__item {
+  margin-right: 20px
+}
+.user-block__item:last-child {
+  margin-right: 0
+}
+.user-avatar {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  overflow: hidden
+}
+.user-avatar__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
 }
 .user-block {
   display: -webkit-box;
@@ -107,7 +123,7 @@ ul {
   align-items: center;
   cursor: pointer
 }
-.user-block__item {
+.user-block-text {
   font-size: 20px;
   line-height: 24px;
   font-weight: 500;
@@ -261,7 +277,7 @@ ul {
 }
 .small-film-card {
   position: relative;
-  width: calc((100% - 50px)/ 4);
+  width: calc((100% - 40px)/ 4);
   border-radius: 6px;
   overflow: hidden;
   cursor: pointer;
@@ -310,6 +326,24 @@ ul {
 }
 .small-film-card__link {
   color: inherit
+}
+.more-films__button {
+  display: block;
+  width: 100%;
+  padding: 29px 40px;
+  background: 0 0;
+  border: 1px solid rgba(217,202,116,.2);
+  border-radius: 8px;
+  -webkit-transition: border-color .5s;
+  transition: border-color .5s;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #000;
+  cursor: pointer
+}
+.more-films__button:hover {
+  border-color: #000
 }
 .main-page__footer {
   margin-top: auto;
