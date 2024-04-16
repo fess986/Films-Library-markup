@@ -99,6 +99,9 @@ ul {
 .main-page-header__logo {
   margin-left: 70px
 }
+.footer__logo {
+  margin-right: 20px
+}
 .logo {
   display: block;
   width: 63px;
@@ -165,7 +168,31 @@ ul {
   transition: .5s color
 }
 .user-block-text:hover {
-  color: #ffff1b
+  color: #ffff1b;
+  -webkit-animation: pulse 1s infinite;
+  animation: pulse 1s infinite
+}
+@-webkit-keyframes pulse {
+  0% {
+    text-shadow: 0 0 25px rgba(255,255,255,.9)
+  }
+  50% {
+    text-shadow: 0 0 50px rgba(255,255,255,.9)
+  }
+  100% {
+    text-shadow: 0 0 25px rgba(255,255,255,.9)
+  }
+}
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 25px rgba(255,255,255,.9)
+  }
+  50% {
+    text-shadow: 0 0 50px rgba(255,255,255,.9)
+  }
+  100% {
+    text-shadow: 0 0 25px rgba(255,255,255,.9)
+  }
 }
 .main-page__film-card {
   position: relative;
@@ -385,6 +412,22 @@ ul {
   line-height: 20px;
   color: #ffff1b
 }
+.small-film-card__title:hover {
+  z-index: 3;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite
+}
+@keyframes pulse {
+  0% {
+    text-shadow: 0 4px 6px rgba(255,255,27,.7)
+  }
+  50% {
+    text-shadow: 0 3px 4px rgba(255,255,27,.7),0 6px 10px rgba(255,165,0,.7)
+  }
+  100% {
+    text-shadow: 0 4px 6px rgba(255,255,27,.7)
+  }
+}
 .small-film-card__link {
   color: inherit
 }
@@ -410,10 +453,13 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
