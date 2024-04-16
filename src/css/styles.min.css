@@ -417,7 +417,7 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: auto;
+  margin-top: 100px;
   max-width: 1400px
 }
 .copypright {
