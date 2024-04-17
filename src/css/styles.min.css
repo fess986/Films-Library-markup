@@ -219,6 +219,7 @@ ul {
   margin-right: 40px
 }
 .film-card__info {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,6 +480,12 @@ ul {
   font-size: 19px;
   line-height: 23px;
   color: #000
+}
+.film-card--movie-page {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
 }
 body {
   background-color: #fff
