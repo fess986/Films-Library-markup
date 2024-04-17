@@ -29,6 +29,36 @@
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
 }
 
+@mixin yellow-shadow-pulse {
+	@keyframes pulse {
+		0% {
+			text-shadow: 0 4px 6px rgba(255, 255, 27, 0.7);
+		}
+		50% {
+			text-shadow: 0 3px 4px rgba(255, 255, 27, 0.7), 0 6px 10px rgba(255, 165, 0, 0.7);
+		}
+		100% {
+			text-shadow: 0 4px 6px rgba(255, 255, 27, 0.7);
+		}
+	}
+	animation: pulse 1s infinite;
+}
+
+@mixin white-shadow-pulse {
+	@keyframes pulse {
+		0% {
+			text-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+		}
+		50% {
+			text-shadow: 0 0 50px rgba(255, 255, 255, 0.9);
+		}
+		100% {
+			text-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+		}
+	}
+	animation: pulse 1s infinite;
+}
+
 @mixin z-index-back {
 	z-index: 0;
 }
