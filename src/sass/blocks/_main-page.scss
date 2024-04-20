@@ -181,7 +181,7 @@
 	@include black-text-stroke;
 
 	max-width: 750px;
-	max-height: 140px;
+	max-height: 85px;
 	overflow: hidden;
 }
 
@@ -205,6 +205,7 @@
 	display: flex;
 	max-width: 700px;
 	max-height: 300px;
+	overflow: hidden;
 }
 
 .film-card__button {
