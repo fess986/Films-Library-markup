@@ -8,10 +8,26 @@
 	align-items: center;
 }
 
-.movie-page__additional-info {
+.movie-page__additional-film-info {
   position: relative;
   @include z-index-middle;
 
   margin-top: -170px;
   color: white;
+}
+
+.additional-film-info {
+	max-width: 1300px;
+	padding: 25px 75px;
+	display: flex;
+}
+
+.additional-film-info__poster {
+	margin-right: 40px;
+}
+
+.additional-film-info__image {
+	width: 218px;
+	max-width: 100%;
+	height: auto;
 }

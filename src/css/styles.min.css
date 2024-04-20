@@ -494,11 +494,26 @@ ul {
   -ms-flex-align: center;
   align-items: center
 }
-.movie-page__additional-info {
+.movie-page__additional-film-info {
   position: relative;
   z-index: 2;
   margin-top: -170px;
   color: #fff
+}
+.additional-film-info {
+  max-width: 1300px;
+  padding: 25px 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.additional-film-info__poster {
+  margin-right: 40px
+}
+.additional-film-info__image {
+  width: 218px;
+  max-width: 100%;
+  height: auto
 }
 body {
   background-color: #fff
