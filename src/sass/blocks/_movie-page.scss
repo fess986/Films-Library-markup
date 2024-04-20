@@ -9,11 +9,13 @@
 }
 
 .movie-page__additional-film-info {
-  position: relative;
-  @include z-index-middle;
 
-  margin-top: -170px;
-  color: white;
+  position: relative;
+	@include z-index-middle;
+
+	transform: translateY(-170px);
+
+	color: white;
 }
 
 .additional-film-info {
@@ -30,4 +32,87 @@
 	width: 218px;
 	max-width: 100%;
 	height: auto;
+}
+
+.additional-film-info__info {
+	padding-top: 100px;
+}
+
+.additional-film-info__film-menu {
+	margin-bottom: 20px;
+}
+
+.film-menu {
+	display: flex;
+	flex-direction: row;
+}
+
+.film-menu__item {
+	position: relative;
+	display: inline-block;
+	min-width: 80px;
+	max-width: 250px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-right: 20px;
+
+	&:nth-last-child(1) {
+		margin-right: 0;
+	}
+}
+
+.film-menu__link {
+	display: inline-block;
+	min-height: 35px;
+	@include font-big;
+	font-weight: 700;
+
+	color: $text-color-main;
+	@include black-text-stroke;
+}
+
+.film-menu__item--active a {
+	border-bottom: 2px solid $text-color-main;
+}
+
+.overview__rating-value {
+	@include font-big;
+
+  padding: 8px 12px;
+
+  color: $text-color-additional;
+	background: rgba(0, 0, 0, 0.24);
+	border-radius: 8px;
+}
+
+.overview__rating-text-value {
+  color: $text-color-additional;
+  @include font-medium;
+  font-weight: 700;
+}
+
+.overview__rating-count {
+  color: $text-color-additional;
+  @include font-medium;
+}
+
+.overview__director-title {
+	color: $text-color-additional;
+  @include font-medium;
+}
+
+.overview__director-name {
+	color: $text-color-additional;
+  @include font-medium;
+}
+
+.overview__starring-title {
+	color: $text-color-additional;
+  @include font-medium;
+}
+
+.overview__starring-names {
+	color: $text-color-additional;
+  @include font-medium;
 }

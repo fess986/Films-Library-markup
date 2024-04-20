@@ -80,7 +80,7 @@ ul {
 }
 .hero {
   max-width: 1440px;
-  height: 675px
+  min-height: 675px
 }
 .hero__image {
   width: 100%;
@@ -497,7 +497,9 @@ ul {
 .movie-page__additional-film-info {
   position: relative;
   z-index: 2;
-  margin-top: -170px;
+  -webkit-transform: translateY(-170px);
+  -ms-transform: translateY(-170px);
+  transform: translateY(-170px);
   color: #fff
 }
 .additional-film-info {
@@ -514,6 +516,85 @@ ul {
   width: 218px;
   max-width: 100%;
   height: auto
+}
+.additional-film-info__info {
+  padding-top: 100px
+}
+.additional-film-info__film-menu {
+  margin-bottom: 20px
+}
+.film-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row
+}
+.film-menu__item {
+  position: relative;
+  display: inline-block;
+  min-width: 80px;
+  max-width: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 20px
+}
+.film-menu__item:nth-last-child(1) {
+  margin-right: 0
+}
+.film-menu__link {
+  display: inline-block;
+  min-height: 35px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #ffff1b;
+  text-shadow: -1px 0 #000,0 1px #000,1px 0 #000,0 -1px #000
+}
+.film-menu__item--active a {
+  border-bottom: 2px solid #ffff1b
+}
+.overview__rating-value {
+  font-size: 25px;
+  line-height: 30px;
+  padding: 8px 12px;
+  color: #000;
+  background: rgba(0,0,0,.24);
+  border-radius: 8px
+}
+.overview__rating-text-value {
+  color: #000;
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 700
+}
+.overview__rating-count {
+  color: #000;
+  font-size: 19px;
+  line-height: 23px
+}
+.overview__director-title {
+  color: #000;
+  font-size: 19px;
+  line-height: 23px
+}
+.overview__director-name {
+  color: #000;
+  font-size: 19px;
+  line-height: 23px
+}
+.overview__starring-title {
+  color: #000;
+  font-size: 19px;
+  line-height: 23px
+}
+.overview__starring-names {
+  color: #000;
+  font-size: 19px;
+  line-height: 23px
 }
 body {
   background-color: #fff
