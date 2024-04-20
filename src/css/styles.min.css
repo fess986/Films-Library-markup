@@ -481,11 +481,24 @@ ul {
   line-height: 23px;
   color: #000
 }
-.film-card--movie-page {
+.movie-page__film-card {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto
+}
+.movie-page__film-card-info {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.movie-page__additional-info {
+  position: relative;
+  z-index: 2;
+  margin-top: -170px;
+  color: #fff
 }
 body {
   background-color: #fff
