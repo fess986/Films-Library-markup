@@ -26,6 +26,7 @@
 
 .additional-film-info__poster {
 	margin-right: 40px;
+	min-width: 218px;
 }
 
 .additional-film-info__image {
@@ -86,6 +87,10 @@
 	border-radius: 8px;
 }
 
+.overview__rating {
+	margin-bottom: 30px;
+}
+
 .overview__rating-text-value {
   color: $text-color-additional;
   @include font-medium;
@@ -97,9 +102,23 @@
   @include font-medium;
 }
 
+.overview__description {
+	margin-bottom: 30px;
+}
+
+.overview__description-text {
+	color: $text-color-additional;
+  @include font-medium;
+}
+
+.overview__director {
+	margin-bottom: 30px;
+}
+
 .overview__director-title {
 	color: $text-color-additional;
   @include font-medium;
+	font-weight: 700;
 }
 
 .overview__director-name {
@@ -110,6 +129,7 @@
 .overview__starring-title {
 	color: $text-color-additional;
   @include font-medium;
+	font-weight: 700;
 }
 
 .overview__starring-names {

@@ -239,7 +239,7 @@ ul {
   color: #ffff1b;
   text-shadow: -1px 0 #000,0 1px #000,1px 0 #000,0 -1px #000;
   max-width: 750px;
-  max-height: 140px;
+  max-height: 85px;
   overflow: hidden
 }
 .film-card__meta {
@@ -260,7 +260,8 @@ ul {
   display: -ms-flexbox;
   display: flex;
   max-width: 700px;
-  max-height: 300px
+  max-height: 300px;
+  overflow: hidden
 }
 .film-card__button {
   margin-right: 14px
@@ -510,7 +511,8 @@ ul {
   display: flex
 }
 .additional-film-info__poster {
-  margin-right: 40px
+  margin-right: 40px;
+  min-width: 218px
 }
 .additional-film-info__image {
   width: 218px;
@@ -565,6 +567,9 @@ ul {
   background: rgba(0,0,0,.24);
   border-radius: 8px
 }
+.overview__rating {
+  margin-bottom: 30px
+}
 .overview__rating-text-value {
   color: #000;
   font-size: 19px;
@@ -576,10 +581,22 @@ ul {
   font-size: 19px;
   line-height: 23px
 }
-.overview__director-title {
+.overview__description {
+  margin-bottom: 30px
+}
+.overview__description-text {
   color: #000;
   font-size: 19px;
   line-height: 23px
+}
+.overview__director {
+  margin-bottom: 30px
+}
+.overview__director-title {
+  color: #000;
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 700
 }
 .overview__director-name {
   color: #000;
@@ -589,7 +606,8 @@ ul {
 .overview__starring-title {
   color: #000;
   font-size: 19px;
-  line-height: 23px
+  line-height: 23px;
+  font-weight: 700
 }
 .overview__starring-names {
   color: #000;
