@@ -150,6 +150,8 @@
 
 .more-films__title {
 	@include font-h2;
+	text-decoration: underline dotted black;
+	text-underline-offset: 5px;
 }
 
 .movie-page__catalog {

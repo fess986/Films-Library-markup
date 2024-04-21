@@ -630,7 +630,10 @@ ul {
 }
 .more-films__title {
   font-size: 32px;
-  line-height: 45px
+  line-height: 45px;
+  -webkit-text-decoration: underline dotted #000;
+  text-decoration: underline dotted #000;
+  text-underline-offset: 5px
 }
 .movie-page__catalog {
   width: 100%;
