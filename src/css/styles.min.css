@@ -461,6 +461,9 @@ ul {
   border-color: #000
 }
 .main-page__footer {
+  margin-top: 100px
+}
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -474,7 +477,6 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 100px;
   max-width: 1400px
 }
 .copypright {
@@ -633,6 +635,9 @@ ul {
 .movie-page__catalog {
   width: 100%;
   padding: 20px 75px
+}
+.movie-page__footer {
+  margin-top: -50px
 }
 body {
   background-color: #fff

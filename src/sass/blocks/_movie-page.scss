@@ -9,8 +9,7 @@
 }
 
 .movie-page__additional-film-info {
-
-  position: relative;
+	position: relative;
 	@include z-index-middle;
 
 	transform: translateY(-170px);
@@ -81,9 +80,9 @@
 .overview__rating-value {
 	@include font-big;
 
-  padding: 8px 12px;
+	padding: 8px 12px;
 
-  color: $text-color-additional;
+	color: $text-color-additional;
 	background: rgba(0, 0, 0, 0.24);
 	border-radius: 8px;
 }
@@ -93,14 +92,14 @@
 }
 
 .overview__rating-text-value {
-  color: $text-color-additional;
-  @include font-medium;
-  font-weight: 700;
+	color: $text-color-additional;
+	@include font-medium;
+	font-weight: 700;
 }
 
 .overview__rating-count {
-  color: $text-color-additional;
-  @include font-medium;
+	color: $text-color-additional;
+	@include font-medium;
 }
 
 .overview__description {
@@ -109,7 +108,7 @@
 
 .overview__description-text {
 	color: $text-color-additional;
-  @include font-medium;
+	@include font-medium;
 }
 
 .overview__director {
@@ -118,27 +117,27 @@
 
 .overview__director-title {
 	color: $text-color-additional;
-  @include font-medium;
+	@include font-medium;
 	font-weight: 700;
 }
 
 .overview__director-name {
 	color: $text-color-additional;
-  @include font-medium;
+	@include font-medium;
 }
 
 .overview__starring-title {
 	color: $text-color-additional;
-  @include font-medium;
+	@include font-medium;
 	font-weight: 700;
 }
 
 .overview__starring-names {
 	color: $text-color-additional;
-  @include font-medium;
+	@include font-medium;
 }
 
-.movie-page__more-films  {
+.movie-page__more-films {
 	width: 1200px;
 	transform: translateY(-170px);
 	padding: 20px 75px;
@@ -147,15 +146,17 @@
 
 .more-films {
 	width: 1200px;
-	// text-align: center;
 }
 
 .more-films__title {
 	@include font-h2;
-	
 }
 
 .movie-page__catalog {
 	width: 100%;
 	padding: 20px 75px;
+}
+
+.movie-page__footer {
+	margin-top: -50px;
 }
