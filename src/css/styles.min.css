@@ -645,6 +645,20 @@ ul {
 .details {
   max-width: 792px
 }
+.details__item {
+  margin-bottom: 30px
+}
+.details__item-title {
+  color: #000;
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 700
+}
+.details__item-value {
+  color: #000;
+  font-size: 19px;
+  line-height: 23px
+}
 body {
   background-color: #fff
 }

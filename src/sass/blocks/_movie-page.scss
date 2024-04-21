@@ -166,3 +166,18 @@
 .details {
 	max-width: 792px;
 }
+
+.details__item {
+	margin-bottom: 30px;
+}
+
+.details__item-title {
+	color: $text-color-additional;
+	@include font-medium;
+	font-weight: 700;
+}
+
+.details__item-value {
+	color: $text-color-additional;
+	@include font-medium;
+}
