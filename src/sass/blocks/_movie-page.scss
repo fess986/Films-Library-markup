@@ -21,6 +21,7 @@
 .additional-film-info {
 	max-width: 1300px;
 	padding: 25px 75px;
+	padding-bottom: 60px;
 	display: flex;
 }
 
@@ -135,4 +136,26 @@
 .overview__starring-names {
 	color: $text-color-additional;
   @include font-medium;
+}
+
+.movie-page__more-films  {
+	width: 1200px;
+	transform: translateY(-170px);
+	padding: 20px 75px;
+	border-top: 2px solid #000;
+}
+
+.more-films {
+	width: 1200px;
+	// text-align: center;
+}
+
+.more-films__title {
+	@include font-h2;
+	
+}
+
+.movie-page__catalog {
+	width: 100%;
+	padding: 20px 75px;
 }

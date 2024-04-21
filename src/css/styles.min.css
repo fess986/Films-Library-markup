@@ -506,6 +506,7 @@ ul {
 .additional-film-info {
   max-width: 1300px;
   padding: 25px 75px;
+  padding-bottom: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex
@@ -613,6 +614,25 @@ ul {
   color: #000;
   font-size: 19px;
   line-height: 23px
+}
+.movie-page__more-films {
+  width: 1200px;
+  -webkit-transform: translateY(-170px);
+  -ms-transform: translateY(-170px);
+  transform: translateY(-170px);
+  padding: 20px 75px;
+  border-top: 2px solid #000
+}
+.more-films {
+  width: 1200px
+}
+.more-films__title {
+  font-size: 32px;
+  line-height: 45px
+}
+.movie-page__catalog {
+  width: 100%;
+  padding: 20px 75px
 }
 body {
   background-color: #fff
