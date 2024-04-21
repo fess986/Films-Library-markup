@@ -30,14 +30,14 @@
 }
 
 .hero__container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	// наложение маски-затемнения для более контрастного отображения текста на картинке
-  background-color: rgba(0, 0, 0, 0.3); 
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .main-page__hero-image {
@@ -143,7 +143,6 @@
 	&:hover {
 		color: $text-color-main;
 		@include white-shadow-pulse;
-
 	}
 }
 
@@ -411,7 +410,6 @@
 		@include z-index-top;
 
 		@include yellow-shadow-pulse;
-
 	}
 }
 
@@ -439,11 +437,15 @@
 }
 
 .main-page__footer {
+	margin-top: 100px;
+}
+
+.footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	margin-top: 100px;
+
 	max-width: 1400px;
 }
 
