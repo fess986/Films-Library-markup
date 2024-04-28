@@ -672,6 +672,54 @@ ul {
   align-items: flex-start;
   max-width: 792px
 }
+.movie-page-reviews__col {
+  width: calc((100% - 60px)/ 2);
+  margin-right: 60px;
+  max-width: 365px
+}
+.movie-page-reviews__col:nth-last-child(1) {
+  margin-right: 0
+}
+.movie-page-review__text {
+  color: #000;
+  font-size: 19px;
+  line-height: 23px
+}
+.movie-page-review__author {
+  display: block;
+  color: #000;
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 700
+}
+.movie-page-review__date {
+  color: #000;
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 700;
+  opacity: .6
+}
+.movie-page-review__rating {
+  font-size: 25px;
+  line-height: 30px;
+  padding: 8px 12px;
+  color: #000;
+  background: rgba(0,0,0,.24);
+  border-radius: 8px;
+  position: absolute;
+  right: 0;
+  top: 0
+}
+.movie-page-review__quote {
+  margin: 0
+}
+.movie-page-review {
+  position: relative;
+  padding-bottom: 20px;
+  padding-right: 75px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #000
+}
 body {
   background-color: #fff
 }
