@@ -114,6 +114,19 @@ function cleanBuild() {
   return del(['build'])
 }
 
+// копирование шрифтов и картинок в папку build
+function copyBuild() {
+  return src([
+      "src/fonts/*.*",
+      'src/images/**/*'
+    ], {
+      base: "src"
+    })
+    .pipe(dest("build"))
+}
+
+exports.copyBuild = copyBuild;
+
 //exports.styles = styles;
 exports.default = parallel(browsersync, styles, startwatch);
 
@@ -122,6 +135,7 @@ const build = gulp.series(
   cleanBuild,  // удаляем папку build
   htmlBuild, //минимизация html и копирование в папку build
   stylesBuild, // минимизация css и копирование в папку build
+  copyBuild // копирование шрифтов и картинок
 )
 
 exports.build = build;
