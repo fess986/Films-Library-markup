@@ -66,6 +66,8 @@ function styles() {
     .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
 
+
+
 function startwatch() {
   watch('src/**/' + preprocessor + '/**/*.scss', styles);  // src/**/sass/**.scss означает, что ищется папка sass, не обязательно в корне src, а может и в глубине
   watch('src/**/*.html').on('change', browserSync.reload);
@@ -73,7 +75,7 @@ function startwatch() {
 }
 
 ////////////////////////////////////// БИЛД ПРИЛОЖЕНИЯ //////////////////////
-//минимизация html
+//минимизация html и копирование в папку build
 function htmlBuild() {
   return src('src/**/*.html')
     .pipe(htmlmin({
@@ -85,7 +87,34 @@ function htmlBuild() {
     .pipe(dest('build'))
 }
 
-exports.styles = styles;
-exports.htmlBuild = htmlBuild;
+// минимизация css и копирование в папку build
+function stylesBuild() {
+  return src('src/sass/main.scss') 
+    .pipe(map.init()) 
+    .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
+    .pipe(preprocessors[preprocessor]()) 
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 versions'],
+      grid: true
+    })) 
+    .pipe(cleancss({
+      level: {
+        2: {
+          specialComments: 0
+        }
+      }
+    })) 
+    .pipe(map.write('../../build/css/')) //записываем карту кода в папку build/css
+    .pipe(dest('build/css/')) // Выгрузим результат в папку "app/css/"
+}
 
+//exports.styles = styles;
 exports.default = parallel(browsersync, styles, startwatch);
+
+//запуск билда проекта
+const build = gulp.series( 
+  htmlBuild,
+  stylesBuild,
+)
+
+exports.build = build;
