@@ -108,6 +108,12 @@ function stylesBuild() {
     .pipe(dest('build/css/')) // Выгрузим результат в папку "app/css/"
 }
 
+function cleanBuild() {
+  return del(['build'])
+}
+
+exports.cleanBuild = cleanBuild;
+
 //exports.styles = styles;
 exports.default = parallel(browsersync, styles, startwatch);
 
