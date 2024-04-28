@@ -6,6 +6,7 @@ const map = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer'); 
 const sass = require('gulp-sass')(require('sass'));
 const cleancss = require('gulp-clean-css'); 
+const htmlmin = require('gulp-htmlmin');
 
 const pagePath = 'src/pages';
 let preprocessor = 'sass'; 
@@ -71,5 +72,20 @@ function startwatch() {
   watch('src/**/*.js').on('change', browserSync.reload);
 }
 
+////////////////////////////////////// БИЛД ПРИЛОЖЕНИЯ //////////////////////
+//минимизация html
+function htmlBuild() {
+  return src('src/**/*.html')
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true,
+      removeEmptyAttributes: true,
+      removeRedundantAttributes: true
+    }))
+    .pipe(dest('build'))
+}
+
 exports.styles = styles;
+exports.htmlBuild = htmlBuild;
+
 exports.default = parallel(browsersync, styles, startwatch);
