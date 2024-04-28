@@ -7,6 +7,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass')(require('sass'));
 const cleancss = require('gulp-clean-css'); 
 const htmlmin = require('gulp-htmlmin');
+const del = require('del'); // Подключаем модуль del
 
 const pagePath = 'src/pages';
 let preprocessor = 'sass'; 
@@ -108,19 +109,19 @@ function stylesBuild() {
     .pipe(dest('build/css/')) // Выгрузим результат в папку "app/css/"
 }
 
+//удаляем папку build, для того чтобы переписать на актуальные изменения
 function cleanBuild() {
   return del(['build'])
 }
-
-exports.cleanBuild = cleanBuild;
 
 //exports.styles = styles;
 exports.default = parallel(browsersync, styles, startwatch);
 
 //запуск билда проекта
 const build = gulp.series( 
-  htmlBuild,
-  stylesBuild,
+  cleanBuild,  // удаляем папку build
+  htmlBuild, //минимизация html и копирование в папку build
+  stylesBuild, // минимизация css и копирование в папку build
 )
 
 exports.build = build;
