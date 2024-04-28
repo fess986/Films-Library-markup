@@ -181,3 +181,11 @@
 	color: $text-color-additional;
 	@include font-medium;
 }
+
+.movie-page-reviews {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+
+	max-width: 792px;
+}

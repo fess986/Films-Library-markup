@@ -659,6 +659,19 @@ ul {
   font-size: 19px;
   line-height: 23px
 }
+.movie-page-reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  max-width: 792px
+}
 body {
   background-color: #fff
 }
