@@ -784,7 +784,25 @@ body {
   text-overflow: ellipsis;
   font-size: 19px;
   line-height: 23px;
-  color: #ffff1b
+  color: #e3e319;
+  -webkit-transition: .5s color;
+  transition: .5s color
+}
+.breadcrumbs__link:hover {
+  color: #ffff1b;
+  -webkit-animation: pulse 1s infinite;
+  animation: pulse 1s infinite
+}
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 25px rgba(255,255,255,.9)
+  }
+  50% {
+    text-shadow: 0 0 50px rgba(255,255,255,.9)
+  }
+  100% {
+    text-shadow: 0 0 25px rgba(255,255,255,.9)
+  }
 }
 .hero__image__add-review {
   width: 1200px;
@@ -808,7 +826,6 @@ body {
 .add-review__additional-film-info {
   position: relative;
   margin: auto;
-  padding-bottom: 60px;
   -webkit-transform: translateY(-170px);
   -ms-transform: translateY(-170px);
   transform: translateY(-170px);
@@ -860,5 +877,66 @@ body {
   color: rgba(56,44,42,.36);
   -webkit-transition: color .2s;
   transition: color .2s
+}
+.add-review-form___review-text {
+  display: block
+}
+.review-text {
+  background: #f2dba8;
+  border-radius: 8px
+}
+.review-text__input {
+  display: block;
+  width: 100%;
+  height: 150px;
+  min-height: 150px;
+  padding: 25px;
+  border: none;
+  background: 0 0;
+  resize: vertical;
+  font-size: 17px;
+  line-height: 20px;
+  color: #000;
+  outline: 0;
+  border: 2px solid #000;
+  -webkit-transition: border-color .5s;
+  transition: border-color .5s
+}
+.review-text__input:focus {
+  border-color: #ffff1b
+}
+.review-text__btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 10px 20px
+}
+.review-text__button {
+  display: block;
+  padding: 0;
+  border: none;
+  background: 0 0;
+  font-size: 17px;
+  line-height: 20px;
+  color: #866866;
+  letter-spacing: 0;
+  line-height: 27px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  -webkit-transition: .5s,.5s -webkit-transform;
+  transition: .5s,.5s -webkit-transform;
+  transition: .5s transform,.5s;
+  transition: .5s transform,.5s,.5s -webkit-transform
+}
+.review-text__button:hover {
+  opacity: .5;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2)
 }
 /*# sourceMappingURL=../css/styles.min.css.map */

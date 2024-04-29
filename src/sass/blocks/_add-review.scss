@@ -42,7 +42,13 @@
 	text-overflow: ellipsis;
 
 	@include font-medium;
-	color: $text-color-main;
+	color: $text-color-main-dark;
+
+	transition: 0.5s color;
+	&:hover {
+		color: $text-color-main;
+		@include white-shadow-pulse;
+	}
 }
 
 .hero__image__add-review {
@@ -66,7 +72,6 @@
 .add-review__additional-film-info {
 	position: relative;
 	margin: auto;
-	padding-bottom: 60px;
 	transform: translateY(-170px);
 
 	@include z-index-middle;
@@ -119,4 +124,69 @@
 		color: rgba(56, 44, 42, 0.36);
 		transition: color 0.2s;
 	}
+}
+
+.add-review-form___review-text {
+	display: block;
+}
+
+.review-text {
+	background: $bg-color-add-review;
+	border-radius: 8px;
+}
+
+.review-text__input {
+	display: block;
+	width: 100%;
+	height: 150px;
+	min-height: 150px;
+	padding: 25px;
+
+	border: none;
+	background: 0 0;
+
+	resize: vertical;
+
+	@include font-small;
+	color: $text-color-additional;
+	outline: none;
+
+	border: 2px solid $text-color-additional; /* Добавляем нижнюю рамку для стилизации */
+  transition: border-color 0.5s; /* Добавляем анимацию перехода цвета рамки */
+
+	&:focus {
+		border-color: $text-color-main; /* Зеленая рамка при фокусе */
+	}
+}
+
+.review-text__btn-container {
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px 20px;
+}
+
+.review-text__button {
+	display: block;
+	padding: 0;
+
+	
+	border: none;
+	background: 0 0;
+
+	@include font-small;
+	color: $bg-color-add-review-post-button;
+	letter-spacing: 0;
+	line-height: 27px;
+	font-weight: 700;
+
+	cursor: pointer;
+
+	transition: opacity 0.5s;
+	transition: 0.5s transform, 0.5s;
+
+	&:hover {
+		opacity: 0.5;
+		transform: scale(1.2);
+	}
+
 }
