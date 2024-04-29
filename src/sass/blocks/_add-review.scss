@@ -1,76 +1,122 @@
 .add-review-page-header {
-  position: relative;
+	position: relative;
 	margin: 0 auto;
 	@include z-index-middle;
 }
 
 .main-page-header__breadcrumbs {
-  margin-left: 20px;
+	margin-left: 20px;
 }
 
 .breadcrumbs {
-  max-width: 700px;
+	max-width: 700px;
 }
 
 .breadcrumbs__list {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .breadcrumbs__item {
-  position: relative;
+	position: relative;
 	display: inline-block;
 	max-width: 500px;
 
-  &:not(:last-child)::after {
-    content: '/';
-    margin: 0 5px;
-    @include font-medium;
-    color: $text-color-main;
-  }
+	&:not(:last-child)::after {
+		content: "/";
+		margin: 0 5px;
+		@include font-medium;
+		color: $text-color-main;
+	}
 }
 
 // работает с переполнением. Блок достигая 450 - режется, при этом родительский блок может иметь размер 500, поэтому текст усекается, а дополнительный контент '/' - остаётся видимым
 .breadcrumbs__link {
-  display: inline-block;  // если не указать, не будет работать свойство height
-  height: $text-size-medium;
-  max-width: 450px;
+	display: inline-block; // если не указать, не будет работать свойство height
+	height: $text-size-medium;
+	max-width: 450px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 
-  @include font-medium;
-  color: $text-color-main;
+	@include font-medium;
+	color: $text-color-main;
 }
 
 .hero__image__add-review {
-  width: 1200px;
-  height: 375px;
-  object-fit: cover;
+	width: 1200px;
+	height: 375px;
+	object-fit: cover;
 }
 
 .add-review__film-card {
-  flex-direction: column;
+	flex-direction: column;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .add-review__hero-image {
-  position: relative;
+	position: relative;
 	@include z-index-middle;
 	min-height: 375px;
 }
 
 .add-review__additional-film-info {
-  position: relative;
-	// padding: 25px 75px;
-  // margin-left: auto;
-  // margin-right: auto;
-  margin: auto;
+	position: relative;
+	margin: auto;
 	padding-bottom: 60px;
 	transform: translateY(-170px);
 
 	@include z-index-middle;
+}
+
+.additional-film-info__add-review-form {
+	margin: auto;
+	margin-top: 20px;
+}
+
+.add-review-form {
+	width: 520px;
+}
+
+.add-review-form__rating-stars {
+	margin-bottom: 15px;
+}
+
+.rating-stars {
+	display: flex;
+	justify-content: center;
+	flex-direction: row-reverse;
+}
+
+.rating__input {
+	display: none;
+}
+
+// находим элемент, который выбран, то есть имеет пометку checked и применяем стили для предыдущих элементов с классом rating__label::after (~ - как раз означает "предыдущий сосед")
+.rating__input:checked ~ .rating__label::after {
+	color: rgba(56, 44, 42, 0.7);
+}
+
+.rating__input:hover ~ .rating__label::after {
+	color: rgba(56, 44, 42, 0.7);
+}
+
+.rating__label {
+	font-size: 0;
+	line-height: 0;
+	display: block;
+	padding-right: 10px;
+	cursor: pointer;
+
+	&::after {
+		content: "★";
+		display: block;
+		font-size: 32px;
+		line-height: 36px;
+		color: rgba(56, 44, 42, 0.36);
+		transition: color 0.2s;
+	}
 }
