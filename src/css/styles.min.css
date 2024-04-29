@@ -814,4 +814,51 @@ body {
   transform: translateY(-170px);
   z-index: 2
 }
+.additional-film-info__add-review-form {
+  margin: auto;
+  margin-top: 20px
+}
+.add-review-form {
+  width: 520px
+}
+.add-review-form__rating-stars {
+  margin-bottom: 15px
+}
+.rating-stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse
+}
+.rating__input {
+  display: none
+}
+.rating__input:checked ~ .rating__label::after {
+  color: rgba(56,44,42,.7)
+}
+.rating__input:hover ~ .rating__label::after {
+  color: rgba(56,44,42,.7)
+}
+.rating__label {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  padding-right: 10px;
+  cursor: pointer
+}
+.rating__label::after {
+  content: "★";
+  display: block;
+  font-size: 32px;
+  line-height: 36px;
+  color: rgba(56,44,42,.36);
+  -webkit-transition: color .2s;
+  transition: color .2s
+}
 /*# sourceMappingURL=../css/styles.min.css.map */
