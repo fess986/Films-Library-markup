@@ -71,7 +71,10 @@
 }
 
 .main-page-header__logo {
+	display: flex;
+	align-items: center;
 	margin-left: 70px;
+
 }
 
 .footer__logo {
