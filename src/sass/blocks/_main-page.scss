@@ -43,11 +43,11 @@
 .main-page__hero-image {
 	position: relative;
 	@include z-index-middle;
+	min-height: 675px;
 }
 
 .hero {
 	max-width: 1440px;
-	min-height: 675px;
 }
 
 .hero__image {
@@ -56,18 +56,18 @@
 }
 
 .hero__header {
-	position: relative;
-	margin: 0 auto;
-	margin-bottom: 58px;
-	@include z-index-middle;
-}
-
-.main-page-header {
 	max-width: 1300px;
 	display: flex;
 	padding: 25px 75px;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.main-page-header {
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 58px;
+	@include z-index-middle;
 }
 
 .main-page-header__logo {
@@ -152,12 +152,12 @@
 .main-page__film-card {
 	position: relative;
 	margin: 0 auto;
+	padding: 25px 75px;
 	@include z-index-middle;
 }
 
 .film-card {
 	max-width: 1300px;
-	padding: 25px 75px;
 	display: flex;
 }
 
