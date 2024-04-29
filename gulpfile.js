@@ -27,7 +27,7 @@ function browsersync() {
   browserSync.init({ 
     server: {
       baseDir: './',
-      index: `${pagePath}/movie-page/movie-page-reviews.html` // - для страниц с фильмами
+      index: `${pagePath}/add-review/add-review.html` // - для страниц с фильмами
       // index: `${pagePath}/main/main.html` // - для главной страницы
     }, 
     notify: false, 
