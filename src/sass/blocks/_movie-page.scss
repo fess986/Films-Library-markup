@@ -11,23 +11,29 @@
 
 .movie-page__additional-film-info {
 	position: relative;
-	@include z-index-middle;
-
+	padding: 25px 75px;
+	padding-bottom: 60px;
 	transform: translateY(-170px);
 
-	color: white;
+	@include z-index-middle;
 }
 
 .additional-film-info {
-	max-width: 1300px;
-	padding: 25px 75px;
-	padding-bottom: 60px;
 	display: flex;
+	max-width: 1300px;
+
+	&--add-review {
+		flex-direction: column;
+	}
 }
 
 .additional-film-info__poster {
 	margin-right: 40px;
 	min-width: 218px;
+
+	&--add-review {
+		margin: auto;
+	}
 }
 
 .additional-film-info__image {

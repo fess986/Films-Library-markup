@@ -62,3 +62,15 @@
 	@include z-index-middle;
 	min-height: 375px;
 }
+
+.add-review__additional-film-info {
+  position: relative;
+	// padding: 25px 75px;
+  // margin-left: auto;
+  // margin-right: auto;
+  margin: auto;
+	padding-bottom: 60px;
+	transform: translateY(-170px);
+
+	@include z-index-middle;
+}
