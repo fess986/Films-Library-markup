@@ -11,17 +11,17 @@
 }
 
 @mixin font-small {
-	font-size: 17px;
+	font-size: $text-size-small;
 	line-height: 20px;
 }
 
 @mixin font-medium {
-	font-size: 19px;
+	font-size: $text-size-medium;
 	line-height: 23px;
 }
 
 @mixin font-big {
-	font-size: 25px;
+	font-size: $text-size-big;
 	line-height: 30px;
 }
 
