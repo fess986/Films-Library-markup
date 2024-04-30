@@ -115,8 +115,8 @@
 		</div>
 
 		<div class="main-page__container container">
-      <!-- add-review__hero-image - класс для уменьшения высоты контейнера -->
-			<section class="add-review__hero-image hero">  
+			<!-- add-review__hero-image - класс для уменьшения высоты контейнера -->
+			<section class="add-review__hero-image hero">
 				<div class="hero__container">
 					<img
 						class="hero__image hero__image__add-review"
@@ -127,29 +127,29 @@
 
 				<h1 class="visually-hidden">Films Library</h1>
 
-				<header class="add-review-page-header hero__header ">
-          <div class="main-page-header__logo">
-            <a class="logo">
-						<img
-							class="logo__image"
-							src="/src/images/logo.jpeg"
-							alt="Films Library"
-						/>
-					</a>
-          
-          <nav class="main-page-header__breadcrumbs breadcrumbs">
-            <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item">
-                <a href="/" class="breadcrumbs__link">The Grand Budapest Hotel</a>
-              </li>
-              <li class="breadcrumbs__item">
-                <a href="/" class="breadcrumbs__link">Add review</a>
-              </li>
-            </ul>
-          </nav>
+				<header class="add-review-page-header hero__header">
+					<div class="main-page-header__logo">
+						<a class="logo">
+							<img
+								class="logo__image"
+								src="/src/images/logo.jpeg"
+								alt="Films Library"
+							/>
+						</a>
 
-          </div>
-					
+						<nav class="main-page-header__breadcrumbs breadcrumbs">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+									<a href="/" class="breadcrumbs__link"
+										>The Grand Budapest Hotel</a
+									>
+								</li>
+								<li class="breadcrumbs__item">
+									<a href="/" class="breadcrumbs__link">Add review</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
 
 					<ul class="main-page-header__user-block user-block">
 						<li class="user-block__item">
@@ -171,14 +171,17 @@
 					<div class="movie-page__film-card-info film-card__info">
 						<div class="film-card__description">
 							<h2 class="film-card__title">The Grand Budapest Hotel</h2>
-
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="add-review__additional-film-info additional-film-info additional-film-info--add-review">
-				<div class="additional-film-info__poster additional-film-info__poster--add-review">
+			<section
+				class="add-review__additional-film-info additional-film-info additional-film-info--add-review"
+			>
+				<div
+					class="additional-film-info__poster additional-film-info__poster--add-review"
+				>
 					<img
 						class="additional-film-info__image"
 						src="/src/images/the-grand-budapest-hotel-poster.jpg"
@@ -186,48 +189,115 @@
 					/>
 				</div>
 
-        <form action="#" class="additional-film-info__add-review-form add-review-form">
-            <div class="add-review-form__rating-stars rating-stars">
-                <input class="rating__input" id="star-10" type="radio" name="rating" value="10" />
-                <label class="rating__label" for="star-10">Rating 10</label>
-  
-                <input class="rating__input" id="star-9" type="radio" name="rating" value="9" />
-                <label class="rating__label" for="star-9">Rating 9</label>
-  
-                <input class="rating__input" id="star-8" type="radio" name="rating" value="8" />
-                <label class="rating__label" for="star-8">Rating 8</label>
-  
-                <input class="rating__input" id="star-7" type="radio" name="rating" value="7" />
-                <label class="rating__label" for="star-7">Rating 7</label>
-  
-                <input class="rating__input" id="star-6" type="radio" name="rating" value="6" />
-                <label class="rating__label" for="star-6">Rating 6</label>
-  
-                <input class="rating__input" id="star-5" type="radio" name="rating" value="5" checked/>
-                <label class="rating__label" for="star-5">Rating 5</label>
-  
-                <input class="rating__input" id="star-4" type="radio" name="rating" value="4" />
-                <label class="rating__label" for="star-4">Rating 4</label>
-  
-                <input class="rating__input" id="star-3" type="radio" name="rating" value="3" />
-                <label class="rating__label" for="star-3">Rating 3</label>
-  
-                <input class="rating__input" id="star-2" type="radio" name="rating" value="2" />
-                <label class="rating__label" for="star-2">Rating 2</label>
-  
-                <input class="rating__input" id="star-1" type="radio" name="rating" value="1" />
-                <label class="rating__label" for="star-1">Rating 1</label>
-              </div>
-  
-            <div class="add-review-form___review-text review-text">
-              <textarea class="review-text__input" name="review-text" id="review-text" placeholder="Review text"></textarea>
-							<div class="review-text__btn-container">
-								<button class="review-text__button" type="submit">Post</button>
-							</div>
-                
-            </div>
-        </form>
+				<form
+					action="#"
+					class="additional-film-info__add-review-form add-review-form"
+				>
+					<div class="add-review-form__rating-stars rating-stars">
+						<input
+							class="rating__input"
+							id="star-10"
+							type="radio"
+							name="rating"
+							value="10"
+						/>
+						<label class="rating__label" for="star-10">Rating 10</label>
 
+						<input
+							class="rating__input"
+							id="star-9"
+							type="radio"
+							name="rating"
+							value="9"
+						/>
+						<label class="rating__label" for="star-9">Rating 9</label>
+
+						<input
+							class="rating__input"
+							id="star-8"
+							type="radio"
+							name="rating"
+							value="8"
+						/>
+						<label class="rating__label" for="star-8">Rating 8</label>
+
+						<input
+							class="rating__input"
+							id="star-7"
+							type="radio"
+							name="rating"
+							value="7"
+						/>
+						<label class="rating__label" for="star-7">Rating 7</label>
+
+						<input
+							class="rating__input"
+							id="star-6"
+							type="radio"
+							name="rating"
+							value="6"
+						/>
+						<label class="rating__label" for="star-6">Rating 6</label>
+
+						<input
+							class="rating__input"
+							id="star-5"
+							type="radio"
+							name="rating"
+							value="5"
+							checked
+						/>
+						<label class="rating__label" for="star-5">Rating 5</label>
+
+						<input
+							class="rating__input"
+							id="star-4"
+							type="radio"
+							name="rating"
+							value="4"
+						/>
+						<label class="rating__label" for="star-4">Rating 4</label>
+
+						<input
+							class="rating__input"
+							id="star-3"
+							type="radio"
+							name="rating"
+							value="3"
+						/>
+						<label class="rating__label" for="star-3">Rating 3</label>
+
+						<input
+							class="rating__input"
+							id="star-2"
+							type="radio"
+							name="rating"
+							value="2"
+						/>
+						<label class="rating__label" for="star-2">Rating 2</label>
+
+						<input
+							class="rating__input"
+							id="star-1"
+							type="radio"
+							name="rating"
+							value="1"
+						/>
+						<label class="rating__label" for="star-1">Rating 1</label>
+					</div>
+
+					<div class="add-review-form___review-text review-text">
+						<textarea
+							class="review-text__input"
+							name="review-text"
+							id="review-text"
+							placeholder="Review text"
+						></textarea>
+						<div class="review-text__btn-container">
+							<button class="review-text__button" type="submit">Post</button>
+						</div>
+					</div>
+				</form>
 			</section>
 
 			<footer class="movie-page__footer footer">
