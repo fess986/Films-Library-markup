@@ -23,12 +23,17 @@
 	position: relative;
 	display: inline-block;
 	max-width: 500px;
+	color: $text-color-main;
+
+		&--my-list {
+			color: $text-color-additional;
+		}
 
 	&:not(:last-child)::after {
 		content: "/";
-		margin: 0 5px;
+		margin-left: 5px;
+		margin-right: 7px;
 		@include font-medium;
-		color: $text-color-main;
 	}
 }
 
@@ -37,17 +42,21 @@
 	display: inline-block; // если не указать, не будет работать свойство height
 	height: $text-size-medium;
 	max-width: 450px;
-	overflow: hidden;
+	overflow-x: clip;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 
 	@include font-medium;
 	color: $text-color-main-dark;
 
-	transition: 0.5s color;
+	transition: transform .5s linear;
+
+	&--my-list {
+		color: $text-color-additional;
+	}
+
 	&:hover {
-		color: $text-color-main;
-		@include white-shadow-pulse;
+		transform: scale(1.1);
 	}
 }
 

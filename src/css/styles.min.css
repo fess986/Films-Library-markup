@@ -105,6 +105,9 @@ ul {
   margin-bottom: 58px;
   z-index: 2
 }
+.main-page-header--my-list {
+  margin-bottom: 0
+}
 .main-page-header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,6 +116,9 @@ ul {
   -ms-flex-align: center;
   align-items: center;
   margin-left: 70px
+}
+.main-page-header__logo--my-list {
+  margin-left: 0
 }
 .footer__logo {
   margin-right: 20px
@@ -143,7 +149,7 @@ ul {
   margin-right: 20px
 }
 .user-block__item:last-child {
-  margin-right: 0
+  margin-right: 10
 }
 .user-avatar {
   width: 63px;
@@ -182,6 +188,10 @@ ul {
   -webkit-transition: .5s color;
   transition: .5s color
 }
+.user-block-text--my-list {
+  color: #000;
+  text-shadow: none
+}
 .user-block-text:hover {
   color: #ffff1b;
   -webkit-animation: pulse 1s infinite;
@@ -208,6 +218,10 @@ ul {
   100% {
     text-shadow: 0 0 25px rgba(255,255,255,.9)
   }
+}
+.catalog__title {
+  font-size: 32px;
+  line-height: 45px
 }
 .main-page__film-card {
   position: relative;
@@ -380,9 +394,12 @@ ul {
   margin-right: 10px;
   margin-bottom: 10px
 }
+.films-list__films-card:nth-child(4n) {
+  margin-right: 0
+}
 .small-film-card {
   position: relative;
-  width: calc((100% - 40px)/ 4);
+  width: calc((100% - 30px)/ 4);
   border-radius: 6px;
   overflow: hidden;
   cursor: pointer;
@@ -766,43 +783,41 @@ body {
 .breadcrumbs__item {
   position: relative;
   display: inline-block;
-  max-width: 500px
+  max-width: 500px;
+  color: #ffff1b
+}
+.breadcrumbs__item--my-list {
+  color: #000
 }
 .breadcrumbs__item:not(:last-child)::after {
   content: "/";
-  margin: 0 5px;
+  margin-left: 5px;
+  margin-right: 7px;
   font-size: 19px;
-  line-height: 23px;
-  color: #ffff1b
+  line-height: 23px
 }
 .breadcrumbs__link {
   display: inline-block;
   height: 19px;
   max-width: 450px;
-  overflow: hidden;
+  overflow-x: clip;
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 19px;
   line-height: 23px;
   color: #e3e319;
-  -webkit-transition: .5s color;
-  transition: .5s color
+  -webkit-transition: -webkit-transform .5s linear;
+  transition: -webkit-transform .5s linear;
+  transition: transform .5s linear;
+  transition: transform .5s linear,-webkit-transform .5s linear
+}
+.breadcrumbs__link--my-list {
+  color: #000
 }
 .breadcrumbs__link:hover {
-  color: #ffff1b;
-  -webkit-animation: pulse 1s infinite;
-  animation: pulse 1s infinite
-}
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 25px rgba(255,255,255,.9)
-  }
-  50% {
-    text-shadow: 0 0 50px rgba(255,255,255,.9)
-  }
-  100% {
-    text-shadow: 0 0 25px rgba(255,255,255,.9)
-  }
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1)
 }
 .hero__image__add-review {
   width: 1200px;
@@ -938,8 +953,5 @@ body {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2)
-}
-.some-class {
-  display: inline
 }
 /*# sourceMappingURL=../css/styles.min.css.map */
