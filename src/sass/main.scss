@@ -2,9 +2,8 @@
 @import "global/variables";  // переменные
 @import "global/global-styles";  // глобальные стили приложения
 
-@import "blocks/main-page";
-@import "blocks/movie-page";
+@import "blocks/main-page";  // главная страница
+@import "blocks/movie-page"; // страница фильма
 @import "blocks/header";  // хедер
-@import "blocks/main-layout";
-@import "blocks/add-review";
-@import 'blocks/my-list';
+@import "blocks/main-layout"; // главный лэйаут
+@import "blocks/add-review";  // страница добавления рецензии на фильм

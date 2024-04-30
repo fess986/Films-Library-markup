@@ -68,6 +68,10 @@
 	margin: 0 auto;
 	margin-bottom: 58px;
 	@include z-index-middle;
+
+	&--my-list {
+		margin-bottom: 0;
+	}
 }
 
 .main-page-header__logo {
@@ -75,6 +79,9 @@
 	align-items: center;
 	margin-left: 70px;
 
+	&--my-list {
+		margin-left: 0;
+	}
 }
 
 .footer__logo {
@@ -106,7 +113,7 @@
 .user-block__item {
 	margin-right: 20px;
 	&:last-child {
-		margin-right: 0;
+		margin-right: 10;
 	}
 }
 
@@ -142,11 +149,20 @@
 	color: $text-color-main-dark;
 	@include black-text-stroke;
 
+	&--my-list {
+		color: $text-color-additional;
+		text-shadow:none;
+	}
+
 	transition: 0.5s color;
 	&:hover {
 		color: $text-color-main;
 		@include white-shadow-pulse;
 	}
+}
+
+.catalog__title {
+	@include font-h2;
 }
 
 .main-page__film-card {
@@ -349,11 +365,15 @@
 .films-list__films-card {
 	margin-right: 10px;
 	margin-bottom: 10px;
+
+	&:nth-child(4n) {
+		margin-right: 0;
+	}
 }
 
 .small-film-card {
 	position: relative;
-	width: calc((100% - 40px) / 4);
+	width: calc((100% - 30px) / 4);
 
 	border-radius: 6px;
 	overflow: hidden;
