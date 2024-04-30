@@ -939,4 +939,7 @@ body {
   -ms-transform: scale(1.2);
   transform: scale(1.2)
 }
+.some-class {
+  display: inline
+}
 /*# sourceMappingURL=../css/styles.min.css.map */
