@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 	</head>
-	<body>
+	<body class="player-page">
 		<div class="visually-hidden">
 			<!-- inject:svg -->
 			<svg
@@ -68,6 +68,9 @@
 						fill="#EEE5B5"
 					/>
 				</symbol>
+        <symbol id="play-s" viewBox="0 0 19 19">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L19 9.5L0 19V0Z" fill="#EEE5B5" />
+        </symbol>
 				<symbol id="pause" viewBox="0 0 14 21">
 					<!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
 					<title>Artboard</title>
@@ -97,14 +100,14 @@
 			<!-- endinject -->
 		</div>
 
-		<div class="player">
+		<div class="player-page__player player">
 			<video
 				src="#"
 				class="player__video"
 				poster="/src/images/player-poster.jpg"
 			></video>
 
-			<button type="button" class="player__exit">Exit</button>
+			<button type="button" class="player__exit-button">Exit</button>
 
 			<div class="player__controls">
 				<div class="player__controls-row">
@@ -116,15 +119,17 @@
 				</div>
 
 				<div class="player__controls-row">
-					<button type="button" class="player__play">
+					<button type="button" class="player__play-button">
 						<svg viewBox="0 0 19 19" width="19" height="19">
 							<use xlink:href="#play-s"></use>
+							<!-- <use xlink:href="#pause"></use> -->
 						</svg>
 						<span>Play</span>
 					</button>
+
 					<div class="player__name">Transpotting</div>
 
-					<button type="button" class="player__full-screen">
+					<button type="button" class="player__full-screen-button">
 						<svg viewBox="0 0 27 27" width="27" height="27">
 							<use xlink:href="#full-screen"></use>
 						</svg>
