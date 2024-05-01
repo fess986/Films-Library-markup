@@ -954,7 +954,50 @@ body {
   -ms-transform: scale(1.2);
   transform: scale(1.2)
 }
-.test {
-  display: inline
+.player-page {
+  position: relative;
+  min-width: 1000px;
+  margin: 0;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 19px;
+  line-height: 23px;
+  color: #ffff1b;
+  background-color: #000
+}
+.player-page__player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1
+}
+.player {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+.player__video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.player__exit-button {
+  position: absolute;
+  top: 37px;
+  right: 32px;
+  z-index: 2
+}
+.exit-button {
+  display: block;
+  background: 0 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ffff1b;
+  padding: 10px 20px;
+  width: 93px;
+  cursor: pointer
 }
 /*# sourceMappingURL=../css/styles.min.css.map */
