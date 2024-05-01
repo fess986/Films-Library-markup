@@ -54,3 +54,76 @@
 
 	cursor: pointer;
 }
+
+.player__controls {
+	position: absolute;
+
+	@include z-index-middle;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.controls {
+	padding: 25px;
+}
+
+.controls__row {
+	display: flex;
+
+	flex-direction: row;
+
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.controls__progress {
+	margin-right: 20px;
+}
+
+.progress {
+	position: relative;
+	flex-grow: 1; // говорим растянуться до максимальной ширины
+}
+
+.progress__line {
+	display: block;
+	width: 100%; // растягиваем на всю ширину
+
+	background: rgba(255, 251, 231, 0.35);
+
+	border-radius: 1px;
+	border: none;
+
+	height: 4px; // высота полосы прогресса
+}
+
+.progress__toggler {
+	display: block;
+	position: absolute;
+
+	left: 0;
+	top: 50%;
+
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	background: #d9cd8d;
+
+	font-size: 0; // для того чтобы скрыть надпись "Toggler"
+
+	transform: translate(-50%, -50%);
+
+	cursor: pointer;
+}
+
+.controls__time-value {
+  flex-shrink: 0;
+
+  width: 60px;
+  
+  text-align: right;
+
+  color: $text-color-main;
+  font-size: 14px;
+}
