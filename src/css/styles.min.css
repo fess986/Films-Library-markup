@@ -1063,4 +1063,71 @@ body {
   color: #ffff1b;
   font-size: 14px
 }
+.controls__play-button {
+  display: block;
+  background: 0 0;
+  border: none;
+  width: 26px;
+  height: 26px;
+  font-size: 0;
+  padding: 0;
+  -webkit-transition: .5s -webkit-transform ease;
+  transition: .5s -webkit-transform ease;
+  transition: .5s transform ease;
+  transition: .5s transform ease,.5s -webkit-transform ease;
+  cursor: pointer
+}
+.controls__play-button:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1)
+}
+.controls__play-icon {
+  fill: #fff9d9;
+  -webkit-transition: fill .3s ease;
+  transition: fill .3s ease
+}
+.controls__play-icon:hover {
+  fill: #ffff1b
+}
+.controls__name {
+  color: #ffff1b;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  margin: 0 30px
+}
+.controls__full-screen-button {
+  margin-left: auto
+}
+.full-screen-button svg {
+  vertical-align: top
+}
+.full-screen-button {
+  display: block;
+  font-size: 0;
+  background: 0 0;
+  border: none;
+  width: 27px;
+  height: 27px;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease,-webkit-transform .3s ease
+}
+.full-screen-button:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1)
+}
+.full-screen-button__icon {
+  fill: #fff9d9;
+  -webkit-transition: fill .3s ease;
+  transition: fill .3s ease
+}
+.full-screen-button__icon:hover {
+  fill: #ffff1b
+}
 /*# sourceMappingURL=../css/styles.min.css.map */
