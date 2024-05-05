@@ -1139,4 +1139,7 @@ body {
 .full-screen-button__icon:hover {
   fill: #ffff1b
 }
+.block {
+  display: block
+}
 /*# sourceMappingURL=../css/styles.min.css.map */
