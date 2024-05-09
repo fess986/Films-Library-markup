@@ -5,11 +5,11 @@
 }
 
 .title {
-  @include font-h2;
+	@include font-h2;
 	color: $text-color-main;
 	@include black-text-stroke;
-  text-align: center;
-  max-width: 300px;
+	text-align: center;
+	max-width: 300px;
 }
 
 .sign-in__form-container {
@@ -17,27 +17,41 @@
 	margin: auto;
 	text-align: center;
 	transform: translateY(-130px);
-	max-width: 480px;
+	max-width: 540px;
 	width: 100%;
-	min-height: 400px;
-	outline: 3px solid $text-color-main;
-	outline-offset: -3px;
-  background-color: green;
 
 	@include z-index-middle;
 }
 
+.form-container {
+	background: url("../../../src/images/script-scroll.jpg") 32px 246px repeat-y;
+	min-height: 400px;
+
+	&--bottom {
+		min-height: 440px; /* Увеличиваем высоту контейнера на 40 пикселей */
+		background-image: url("../../../src/images/script-bottom-without-bg.png");
+		background-position: 6px calc(100% + 32px); // смещаем картинку вниз
+		background-repeat: no-repeat;
+	}
+
+	&--top {
+		min-height: 440px;
+		background: url("../../../src/images/script-top-without-bg.png") left -40px no-repeat;
+	}
+}
+
 .sign-in__form {
-  margin-bottom: 30px;
+	padding: 35px 50px 50px 60px;
+	// padding-bottom: 40px;
 }
 
 .sign-in {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
 
 .message-text {
-  @include font-medium;
-  color: $text-color-main;
+	@include font-medium;
+	color: $text-color-main;
 }
