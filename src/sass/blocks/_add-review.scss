@@ -29,6 +29,10 @@
 			color: $text-color-additional;
 		}
 
+		&--dark {
+			color: $text-color-additional;
+		}
+
 	&:not(:last-child)::after {
 		content: "/";
 		margin-left: 5px;
@@ -51,7 +55,7 @@
 
 	transition: transform .5s linear;
 
-	&--my-list {
+	&--dark {
 		color: $text-color-additional;
 	}
 
