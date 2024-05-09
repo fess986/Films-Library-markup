@@ -1162,16 +1162,26 @@ body {
   -webkit-transform: translateY(-130px);
   -ms-transform: translateY(-130px);
   transform: translateY(-130px);
-  max-width: 480px;
+  max-width: 540px;
   width: 100%;
-  min-height: 400px;
-  outline: 3px solid #ffff1b;
-  outline-offset: -3px;
-  background-color: green;
   z-index: 2
 }
+.form-container {
+  background: url(../../../src/images/script-scroll.jpg) 32px 246px repeat-y;
+  min-height: 400px
+}
+.form-container--bottom {
+  min-height: 440px;
+  background-image: url(../../../src/images/script-bottom-without-bg.png);
+  background-position: 6px calc(100% + 32px);
+  background-repeat: no-repeat
+}
+.form-container--top {
+  min-height: 440px;
+  background: url(../../../src/images/script-top-without-bg.png) left -40px no-repeat
+}
 .sign-in__form {
-  margin-bottom: 30px
+  padding: 35px 50px 50px 60px
 }
 .sign-in {
   display: -webkit-box;
