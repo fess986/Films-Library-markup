@@ -188,7 +188,7 @@ ul {
   -webkit-transition: .5s color;
   transition: .5s color
 }
-.user-block-text--my-list {
+.user-block-text--dark {
   color: #000;
   text-shadow: none
 }
@@ -789,6 +789,9 @@ body {
 .breadcrumbs__item--my-list {
   color: #000
 }
+.breadcrumbs__item--dark {
+  color: #000
+}
 .breadcrumbs__item:not(:last-child)::after {
   content: "/";
   margin-left: 5px;
@@ -811,7 +814,7 @@ body {
   transition: transform .5s linear;
   transition: transform .5s linear,-webkit-transform .5s linear
 }
-.breadcrumbs__link--my-list {
+.breadcrumbs__link--dark {
   color: #000
 }
 .breadcrumbs__link:hover {
@@ -1161,6 +1164,7 @@ body {
   transform: translateY(-130px);
   max-width: 480px;
   width: 100%;
+  min-height: 400px;
   outline: 3px solid #ffff1b;
   outline-offset: -3px;
   background-color: green;
