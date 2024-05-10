@@ -1230,24 +1230,7 @@ body {
 .sign-in__input:focus {
   border-color: #ffff1b
 }
-.sign-in__input::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 0 0;
-  pointer-events: none;
-  z-index: 1
-}
-.sign-in__input:not(:-moz-placeholder-shown)::after {
-  display: none
-}
-.sign-in__input:not(:-ms-input-placeholder)::after {
-  display: none
-}
-.sign-in__input:not(:placeholder-shown)::after {
-  display: none
+.sign-in__button {
+  margin-bottom: 30px
 }
 /*# sourceMappingURL=../css/styles.min.css.map */
