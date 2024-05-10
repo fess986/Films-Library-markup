@@ -1186,7 +1186,7 @@ body {
   background: url(../../../src/images/script-top-without-bg.png) left -40px no-repeat
 }
 .sign-in__form {
-  padding: 45px 50px 50px 60px
+  padding: 60px 50px 50px 60px
 }
 .sign-in {
   display: -webkit-box;
@@ -1205,7 +1205,13 @@ body {
 .message-text {
   font-size: 19px;
   line-height: 23px;
+  text-align: start
+}
+.message-text--normal {
   color: #000
+}
+.message-text--error {
+  color: red
 }
 .sign-in__fields {
   margin-bottom: 30px
