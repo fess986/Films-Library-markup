@@ -27,12 +27,12 @@ function browsersync() {
   browserSync.init({ 
     server: {
       baseDir: './',
-      // index: `${pagePath}/sign-in/sign-in.html`,  // - для страницы с плейером - в состоянии паузы
-      index: `${pagePath}/player/player-pause.html`,  // - для страницы с плейером - в состоянии паузы
+      // index: `${pagePath}/main/main.html` // - для главной страницы
+      index: `${pagePath}/sign-in/sign-in.html`,  // - для страницы с плейером - в состоянии паузы
+      // index: `${pagePath}/player/player-pause.html`,  // - для страницы с плейером - в состоянии паузы
       // index: `${pagePath}/player/player.html`,  // - для страницы с плейером
       // index: `${pagePath}/my-list/my-list.html` // - для страниц со списком пользовательских фильмов
       // index: `${pagePath}/add-review/add-review.html` // - для страницы с добавлением фильма
-      // index: `${pagePath}/main/main.html` // - для главной страницы
       // index: `${pagePath}/movie-page/movie-page-details.html` // - для страницы фильма - детализация
       // index: `${pagePath}/movie-page/movie-page-reviews.html` // - для страницы фильма - детализация
       // index: `${pagePath}/movie-page/movie-page.html` // - для страницы фильма - детализация
