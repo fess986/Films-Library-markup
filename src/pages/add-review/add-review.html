@@ -118,11 +118,10 @@
 			<!-- add-review__hero-image - класс для уменьшения высоты контейнера -->
 			<section class="add-review__hero-image hero">
 				<div class="hero__container">
-					<img
-						class="hero__image hero__image__add-review"
-						src="/src/images/hero-poster2.jpg"
-						alt="Hero poster"
-					/>
+					<picture>
+						<source srcset="/src/images/hero-poster2.webp" type="image/webp">
+						<img class="hero__image hero__image__add-review" src="/src/images/hero-poster2.jpg" alt="The Grand Budapest Hotel">
+					</picture>
 				</div>
 
 				<h1 class="visually-hidden">Films Library</h1>
