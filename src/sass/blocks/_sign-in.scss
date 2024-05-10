@@ -97,11 +97,11 @@
 	transition: border-color .5s;
 
 	&:hover {
-		border-color: $text-color-main;
+		border-color: $text-color-input-hover;
 	}
 
 	&:focus {
-		border-color: $text-color-main;
+		border-color: $text-color-input-hover;
 	}
 }
 

@@ -1236,10 +1236,10 @@ body {
   transition: border-color .5s
 }
 .sign-in__input:hover {
-  border-color: #ffff1b
+  border-color: #305478
 }
 .sign-in__input:focus {
-  border-color: #ffff1b
+  border-color: #305478
 }
 .sign-in__button {
   margin-bottom: 30px
