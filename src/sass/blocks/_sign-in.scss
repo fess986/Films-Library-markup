@@ -41,7 +41,7 @@
 }
 
 .sign-in__form {
-	padding: 35px 50px 50px 60px;
+	padding: 45px 50px 50px 60px;
 	// padding-bottom: 40px;
 }
 
@@ -51,7 +51,65 @@
 	flex-wrap: nowrap;
 }
 
+.sign-in__message-text {
+	margin-bottom: 30px;
+}
+
 .message-text {
 	@include font-medium;
-	color: $text-color-main;
+	color: $text-color-additional;
+}
+
+.sign-in__fields {
+	margin-bottom: 30px;
+}
+
+.sign-in__field {
+	margin-bottom: 3px;
+	position: relative;
+}
+
+.sign-in__input {
+	position: relative;
+	display: block;
+	width: 100%;
+
+	background: 0 0;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	outline: 0;
+
+	color: $text-color-additional;
+
+	@include font-h2;
+
+	padding: 25px 20px;
+	transition: border-color .5s;
+
+	&:hover {
+		border-color: $text-color-main;
+	}
+
+	&:focus {
+		border-color: $text-color-main;
+		// background: red;
+	}
+}
+
+/* Псевдоэлемент, который будет служить фоном инпута */
+.sign-in__input::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: transparent; /* Или любой другой цвет, который вы хотите сохранить */
+	pointer-events: none; /* Это позволит кликам проходить сквозь псевдоэлемент */
+	z-index: 1; /* Поднимем псевдоэлемент над содержимым инпута */
+}
+
+/* Убираем фон, если поле не пустое */
+.sign-in__input:not(:placeholder-shown)::after {
+	display: none;
 }
