@@ -1181,7 +1181,7 @@ body {
   background: url(../../../src/images/script-top-without-bg.png) left -40px no-repeat
 }
 .sign-in__form {
-  padding: 35px 50px 50px 60px
+  padding: 45px 50px 50px 60px
 }
 .sign-in {
   display: -webkit-box;
@@ -1194,9 +1194,60 @@ body {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap
 }
+.sign-in__message-text {
+  margin-bottom: 30px
+}
 .message-text {
   font-size: 19px;
   line-height: 23px;
-  color: #ffff1b
+  color: #000
+}
+.sign-in__fields {
+  margin-bottom: 30px
+}
+.sign-in__field {
+  margin-bottom: 3px;
+  position: relative
+}
+.sign-in__input {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: 0 0;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  outline: 0;
+  color: #000;
+  font-size: 32px;
+  line-height: 45px;
+  padding: 25px 20px;
+  -webkit-transition: border-color .5s;
+  transition: border-color .5s
+}
+.sign-in__input:hover {
+  border-color: #ffff1b
+}
+.sign-in__input:focus {
+  border-color: #ffff1b
+}
+.sign-in__input::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 0 0;
+  pointer-events: none;
+  z-index: 1
+}
+.sign-in__input:not(:-moz-placeholder-shown)::after {
+  display: none
+}
+.sign-in__input:not(:-ms-input-placeholder)::after {
+  display: none
+}
+.sign-in__input:not(:placeholder-shown)::after {
+  display: none
 }
 /*# sourceMappingURL=../css/styles.min.css.map */
