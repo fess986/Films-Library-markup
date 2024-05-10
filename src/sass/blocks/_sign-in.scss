@@ -1,7 +1,6 @@
 .sign-in__title {
 	position: relative;
 	margin: 0 auto;
-	margin-top: 40px;
 }
 
 .title {
@@ -21,6 +20,10 @@
 	width: 100%;
 
 	@include z-index-middle;
+}
+
+.sign-in__form-container {
+	margin-top: -50px;
 }
 
 .form-container {

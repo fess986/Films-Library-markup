@@ -502,6 +502,9 @@ ul {
   align-items: center;
   max-width: 1400px
 }
+.footer--sign-in {
+  margin-bottom: 20px
+}
 .copypright {
   font-size: 19px;
   line-height: 23px;
@@ -1144,8 +1147,7 @@ body {
 }
 .sign-in__title {
   position: relative;
-  margin: 0 auto;
-  margin-top: 40px
+  margin: 0 auto
 }
 .title {
   font-size: 32px;
@@ -1165,6 +1167,9 @@ body {
   max-width: 540px;
   width: 100%;
   z-index: 2
+}
+.sign-in__form-container {
+  margin-top: -50px
 }
 .form-container {
   background: url(../../../src/images/script-scroll.jpg) 32px 246px repeat-y;
