@@ -44,8 +44,7 @@
 }
 
 .sign-in__form {
-	padding: 45px 50px 50px 60px;
-	// padding-bottom: 40px;
+	padding: 60px 50px 50px 60px;
 }
 
 .sign-in {
@@ -60,7 +59,15 @@
 
 .message-text {
 	@include font-medium;
+	text-align: start;
+
+	&--normal {
 	color: $text-color-additional;
+	}
+
+	&--error {
+		color: $text-color-error;
+	}
 }
 
 .sign-in__fields {
